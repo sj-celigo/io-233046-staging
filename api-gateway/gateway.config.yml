@@ -1,0 +1,6821 @@
+apiEndpoints:
+  webhook-api1:
+    host: '*'
+    paths: '/v1/exports/:_id/data'
+    methods:
+      - HEAD
+      - POST
+      - GET
+      - PUT
+  webhook-api2:
+    host: '*'
+    paths: '/v1/exports/:_id/:token/data'
+    methods:
+      - HEAD
+      - POST
+      - GET
+      - PUT
+  webhook-api3:
+    host: '*'
+    paths: '/v1/netsuite/exports/:_id/data'
+    methods:
+      - POST
+  webhook-api4:
+    host: '*'
+    paths: '/v1/salesforce/exports/:_id/data'
+    methods:
+      - POST
+  webhook-api5:
+    host: '*'
+    paths: '/v1/shopify/exports/:_id/data'
+    methods:
+      - POST
+  webhook-api6:
+    host: '*'
+    paths: '/v1/netsuite/exports/:_id/errors'
+    methods:
+      - POST
+  webhook-api7:
+    host: '*'
+    paths: '/v1/salesforce/exports/:_id/errors'
+    methods:
+      - POST
+  as2-webhook:
+    host: '*'
+    paths: /v1/as2
+    methods:
+      - POST
+  gptverse-ui:
+    host: '*'
+    paths: /api/gptverse/*
+    methods:
+      - POST
+      - GET
+      - PUT
+  gptverse-api-old:
+    host: '*'
+    paths: /v1/gptverse/editor/rule/sql
+    methods:
+      - POST
+      - GET
+      - PUT
+  gptverse-api:
+    host: '*'
+    paths: /v1/gptverse/*
+    methods:
+      - POST
+      - GET
+      - PUT
+  system-api1:
+    host: '*'
+    paths: /system/v1/timestamp
+    methods:
+      - GET
+  system-api2:
+    host: '*'
+    paths: /system/v1/usage/diy/current
+    methods:
+      - GET
+  system-api3:
+    host: '*'
+    paths: /system/v1/usage/diy/lastMonth
+    methods:
+      - GET
+  system-api4:
+    host: '*'
+    paths: /system/v1/usage/connector/current
+    methods:
+      - GET
+  system-api5:
+    host: '*'
+    paths: /system/v1/usage/connector/lastMonth
+    methods:
+      - GET
+  system-api6:
+    host: '*'
+    paths: '/system/v1/licenses/:_id'
+    methods:
+      - PUT
+  system-api7:
+    host: '*'
+    paths: /system/v1/heartbeat
+    methods:
+      - PUT
+  system-api8:
+    host: '*'
+    paths: /system/v1/signup
+    methods:
+      - POST
+  system-api9:
+    host: '*'
+    paths: /status
+    methods:
+      - GET
+  system-api10:
+    host: '*'
+    paths: '/v1/stacks/:_stackId/status'
+    methods:
+      - GET
+  system-api11:
+    host: '*'
+    paths: /v1/ftp-bridge/status
+    methods:
+      - GET
+  system-api12:
+    host: '*'
+    paths: /v1/js-runtime/status
+    methods:
+      - GET
+  system-api13:
+    host: '*'
+    paths: /v1/file-service/status
+    methods:
+      - GET
+  system-api14:
+    host: '*'
+    paths: /v1/kcgworkers/status
+    methods:
+      - GET
+  system-api15:
+    host: '*'
+    paths: /v1/ksqlservers/status
+    methods:
+      - GET
+  system-api16:
+    host: '*'
+    paths: /v1/qgworkers/status
+    methods:
+      - GET
+  system-api17:
+    host: '*'
+    paths: /v1/kcg/status
+    methods:
+      - GET
+  system-api18:
+    host: '*'
+    paths: /v1/qgbackend/status
+    methods:
+      - GET
+  system-api19:
+    host: '*'
+    paths: /v1/prometheus/status
+    methods:
+      - GET
+  system-api20:
+    host: '*'
+    paths: /v1/prometheus/classifications/status
+    methods:
+      - GET
+  system-api21:
+    host: '*'
+    paths: /v1/prometheus/mappings/status
+    methods:
+      - GET
+  system-api22:
+    host: '*'
+    paths: /system/v1/markBouncedNotifications
+    methods:
+      - POST
+  system-api23:
+    host: '*'
+    paths: /system/v1/servers
+    methods:
+      - GET
+  system-api24:
+    host: '*'
+    paths: '/system/v1/servers/:_serverId'
+    methods:
+      - GET
+  system-api25:
+    host: '*'
+    paths: '/system/v1/serverstacks/:stackId'
+    methods:
+      - GET
+  system-api26:
+    host: '*'
+    paths: /system/v1/captureHeapProfile
+    methods:
+      - GET
+  system-api27:
+    host: '*'
+    paths: /system/v1/mfa/reset
+    methods:
+      - POST
+  system-api28:
+    host: '*'
+    paths: /v1/qgworkerstack/status
+    methods:
+      - GET
+  system-api43:
+    host: '*'
+    paths:
+      - /system/v1/canaryGroups/*
+      - /system/v1/rollouts/*
+      - /system/v1/identityRegistries*
+      - /system/v1/queue-stats*
+    methods: '*'
+  system-api29:
+    host: '*'
+    paths: '/system/v1/:microServiceName/enable'
+    methods:
+      - POST
+  system-api30:
+    host: '*'
+    paths: '/system/v1/:microServiceName/disable'
+    methods:
+      - POST
+  system-api30-1:
+    host: '*'
+    paths: '/system/v1/git/:service/:resource'
+    methods:
+      - POST
+      - PATCH
+      - DELETE
+  system-api31:
+    host: '*'
+    paths: '/system/v1/:modelPlural'
+    methods:
+      - PATCH
+  system-api32:
+    host: '*'
+    paths: '/system/v1/:microServiceName'
+    methods:
+      - GET
+  system-api33:
+    host: '*'
+    paths: '/system/v1/:modelPlural/:_id/:microServiceName'
+    methods:
+      - GET
+  system-api34:
+    host: '*'
+    paths: /system/v1/logPayload
+    methods:
+      - POST
+  system-api35:
+    host: '*'
+    paths: /system/v1/apim/setup
+    methods:
+      - POST
+  system-api36:
+    host: '*'
+    paths: '/system/v1/licenseEntitlements/:_userId'
+    methods:
+      - GET
+  system-api37:
+    host: '*'
+    paths: '/system/v1/splunk/:host/:source/:sourcetype'
+    methods:
+      - POST
+  system-api38:
+    host: '*'
+    paths: '/system/v1/licenseEntitlements/:_userId'
+    methods:
+      - GET
+  system-api44:
+    host: '*'
+    paths:
+      - /v1/test/canaryGroups/*
+      - /v1/test/rollouts/*
+      - /v1/test/identityRegistries*
+    methods: '*'
+  system-api39:
+    host: '*'
+    paths: /v1/test/signup
+    methods:
+      - POST
+  system-api41:
+    host: '*'
+    paths: '/netsuite/v1/users/:netSuiteAccountId'
+    methods:
+      - PUT
+  system-api42:
+    host: '*'
+    paths: '/v1/test/licenses/:_id'
+    methods:
+      - PUT
+  system-api46:
+    host: '*'
+    paths: /v1/test/license/expire
+    methods:
+      - PUT
+  system-api45:
+    host: '*'
+    paths: '/system/v1/users/:_userId/celigouniversity/link'
+    methods:
+      - PATCH
+  system-api47:
+    host: '*'
+    paths: /v1/ftp-bridge2/status
+    methods:
+      - GET
+  system-api48:
+    host: '*'
+    paths: /v1/users
+    methods:
+      - PATCH
+  system-api49:
+    host: '*'
+    paths: '/v1/test/git/:service/:resource'
+    methods:
+      - POST
+      - PATCH
+      - DELETE
+  system-api50:
+    host: '*'
+    paths: '/v1/test/platformUsage/reset/:_userId'
+    methods:
+      - DELETE
+  system-api51:
+    host: '*'
+    paths: /v1/test/platformUsage/overageNotifications
+    methods:
+      - POST
+  system-api52:
+    host: '*'
+    paths: /system/v1/apim/licenses/refresh
+    methods:
+      - PUT
+  system-api53:
+    host: '*'
+    paths: /v1/test/apim/licenses/refresh
+    methods:
+      - PUT
+  api-execution-api1:
+    host: '*'
+    paths: '/api/apis/:_id/test/run'
+    methods:
+      - POST
+  api-execution-api2:
+    host: '*'
+    paths: '/api/apis/:_id/test/cancel'
+    methods:
+      - POST
+  api-execution-api3:
+    host: '*'
+    paths: '/api/flows/:_id/test/run'
+    methods:
+      - POST
+  api-execution-api4:
+    host: '*'
+    paths: /api/flows/test/cancel
+    methods:
+      - POST
+  api-execution-api5:
+    host: '*'
+    paths: /api/tools/input/preview
+    methods:
+      - POST
+  api-execution-api6:
+    host: '*'
+    paths: '/api/tools/:_toolId/invoke'
+    methods:
+      - POST
+  api-execution-api7:
+    host: '*'
+    paths: /api/tools/output/preview
+    methods:
+      - POST
+  api-execution-api10:
+    host: '*'
+    paths: '/api/:modelPlural/:_id/openapispec'
+    methods:
+      - PUT
+  api-execution-v1-1:
+    host: '*'
+    paths: '/v1/apis/:_id/test/run'
+    methods:
+      - POST
+  api-execution-v1-2:
+    host: '*'
+    paths: '/v1/apis/:_id/test/cancel'
+    methods:
+      - POST
+  api-execution-v1-3:
+    host: '*'
+    paths: /apis/*
+    methods:
+      - GET
+      - POST
+      - PUT
+      - PATCH
+      - DELETE
+  api-execution-v1-4:
+    host: '*'
+    paths: '/v1/flows/:_id/test/run'
+    methods:
+      - POST
+  api-execution-v1-5:
+    host: '*'
+    paths: /v1/flows/test/cancel
+    methods:
+      - POST
+  api-execution-v1-6:
+    host: '*'
+    paths: '/v1/tools/:_toolId/invoke'
+    methods:
+      - POST
+  api-execution-api8:
+    host: '*'
+    paths: '/api/tools/:_id/test/run'
+    methods:
+      - POST
+  api-execution-api9:
+    host: '*'
+    paths: '/api/tools/:_id/test/cancel'
+    methods:
+      - POST
+  api-execution-v1-7:
+    host: '*'
+    paths: '/v1/tools/:_id/test/run'
+    methods:
+      - POST
+  api-execution-v1-8:
+    host: '*'
+    paths: '/v1/tools/:_id/test/cancel'
+    methods:
+      - POST
+  api-execution-v1-9:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/openapispec'
+    methods:
+      - PUT
+  mcp-unset-draft-claim:
+    host: '*'
+    paths: '/api/mcpservers/:_id/unsetDraft'
+    methods:
+      - PUT
+  mcp-management-api-recyclebin1:
+    host: '*'
+    paths: /api/recycleBinTTL/mcpservers
+    methods:
+      - GET
+  mcp-management-api-recyclebin2:
+    host: '*'
+    paths: '/api/recycleBinTTL/mcpservers/:_id'
+    methods:
+      - GET
+  mcp-management-api-recyclebin3:
+    host: '*'
+    paths: '/api/recycleBinTTL/mcpservers/:_id'
+    methods:
+      - POST
+      - DELETE
+  mcp-management-api-recyclebin4:
+    host: '*'
+    paths: '/api/recycleBinTTL/mcpservers/:_id/doCascadeRestore'
+    methods:
+      - POST
+  mcp-management-api1:
+    host: '*'
+    paths: /api/mcpservers
+    methods:
+      - GET
+      - POST
+  mcp-management-api2:
+    host: '*'
+    paths: '/api/mcpservers/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  mcp-management-api3:
+    host: '*'
+    paths: /api/mcpoauthproviders
+    methods:
+      - GET
+      - POST
+  mcp-management-api4:
+    host: '*'
+    paths: '/api/mcpoauthproviders/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  mcp-management-v1-recyclebin1:
+    host: '*'
+    paths: /v1/recycleBinTTL/mcpservers
+    methods:
+      - GET
+  mcp-management-v1-recyclebin2:
+    host: '*'
+    paths: '/v1/recycleBinTTL/mcpservers/:_id'
+    methods:
+      - GET
+  mcp-management-v1-recyclebin3:
+    host: '*'
+    paths: '/v1/recycleBinTTL/mcpservers/:_id'
+    methods:
+      - POST
+      - DELETE
+  mcp-management-v1-recyclebin4:
+    host: '*'
+    paths: '/v1/recycleBinTTL/mcpservers/:_id/doCascadeRestore'
+    methods:
+      - POST
+  mcp-management-v1-1:
+    host: '*'
+    paths: /v1/mcpservers
+    methods:
+      - GET
+      - POST
+  mcp-management-v1-2:
+    host: '*'
+    paths: '/v1/mcpservers/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  mcp-management-v1-3:
+    host: '*'
+    paths: /v1/mcpoauthproviders
+    methods:
+      - GET
+      - POST
+  mcp-management-v1-4:
+    host: '*'
+    paths: '/v1/mcpoauthproviders/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  mcp-oauth-as-discovery:
+    host: '*'
+    paths:
+      - /.well-known/oauth-authorization-server
+      - /.well-known/oauth-authorization-server/*
+      - /.well-known/openid-configuration
+    methods:
+      - GET
+      - OPTIONS
+  mcp-servers-api1:
+    host: '*'
+    paths: '/mcp/:accountAlias/:relativeURI'
+    methods:
+      - GET
+      - POST
+      - DELETE
+      - OPTIONS
+  mcp-servers-api3:
+    host: '*'
+    paths: '/mcp/:relativeURI'
+    methods:
+      - GET
+      - POST
+      - DELETE
+      - OPTIONS
+  mcp-servers-api2:
+    host: '*'
+    paths: '/api/mcpservers/:_id/preview'
+    methods:
+      - GET
+      - POST
+  mcp-oauth-resource-metadata:
+    host: '*'
+    paths: '/.well-known/oauth-protected-resource/mcp/:accountAlias/:relativeURI'
+    methods:
+      - GET
+      - OPTIONS
+  io-mcp-server-api:
+    host: '*'
+    paths: /celigo-mcp
+    methods:
+      - GET
+      - POST
+      - DELETE
+      - OPTIONS
+  celigo-mcp-oauth-resource-metadata:
+    host: '*'
+    paths: /.well-known/oauth-protected-resource/celigo-mcp
+    methods:
+      - GET
+      - OPTIONS
+  api1:
+    host: '*'
+    paths: /signin
+    methods:
+      - POST
+  api2:
+    host: '*'
+    paths: /csrf
+    methods:
+      - GET
+  api3:
+    host: '*'
+    paths: /api/validate-session
+    methods:
+      - GET
+  api4:
+    host: '*'
+    paths: /mfa/verify
+    methods:
+      - POST
+  api5:
+    host: '*'
+    paths: /signout
+    methods:
+      - POST
+  api6:
+    host: '*'
+    paths: /auth/google/oauth2callback
+    methods:
+      - GET
+  api7:
+    host: '*'
+    paths: /auth/google
+    methods:
+      - POST
+  api8:
+    host: '*'
+    paths: '/sso/:orgId'
+    methods:
+      - POST
+      - GET
+  api9:
+    host: '*'
+    paths: '/sso/:orgId/callback'
+    methods:
+      - GET
+  api10:
+    host: '*'
+    paths: /api/profile
+    methods:
+      - GET
+      - PUT
+  api11:
+    host: '*'
+    paths: /api/preferences
+    methods:
+      - GET
+      - PUT
+  api12:
+    host: '*'
+    paths: '/api/preferences/ssConnectionIds/:_connectionId'
+    methods:
+      - PUT
+      - DELETE
+  api13:
+    host: '*'
+    paths: /reSigninWithGoogle
+    methods:
+      - GET
+      - POST
+  api14:
+    host: '*'
+    paths: /request-reset
+    methods:
+      - POST
+  api15:
+    host: '*'
+    paths: /signup
+    methods:
+      - POST
+  api16:
+    host: '*'
+    paths: /set-initial-password
+    methods:
+      - POST
+  api17:
+    host: '*'
+    paths: /accept-invite
+    methods:
+      - POST
+  api18:
+    host: '*'
+    paths: /accept-invite-metadata
+    methods:
+      - POST
+  api19:
+    host: '*'
+    paths: /reset-password
+    methods:
+      - POST
+  api20:
+    host: '*'
+    paths: /change-email
+    methods:
+      - POST
+  api21:
+    host: '*'
+    paths: /api/change-password
+    methods:
+      - PUT
+  api22:
+    host: '*'
+    paths: '/reSigninWithSSO/:_ssoClientId'
+    methods:
+      - GET
+      - POST
+  api23:
+    host: '*'
+    paths: /link/google
+    methods:
+      - POST
+  api24:
+    host: '*'
+    paths: /unlink/google
+    methods:
+      - POST
+  api25:
+    host: '*'
+    paths: /api/mfa/setup
+    methods:
+      - GET
+      - POST
+  api26:
+    host: '*'
+    paths: /api/mfa/secret/generate
+    methods:
+      - POST
+  api27:
+    host: '*'
+    paths: /api/mfa/secret/view
+    methods:
+      - POST
+  api28:
+    host: '*'
+    paths: /api/mfa/test
+    methods:
+      - POST
+  api29:
+    host: '*'
+    paths: /api/mfa/reset
+    methods:
+      - POST
+  api30:
+    host: '*'
+    paths: /api/mfa/sessionInfo
+    methods:
+      - GET
+  api31:
+    host: '*'
+    paths: '/api/ashares/:_ashareId/mfa/reset'
+    methods:
+      - POST
+  api32:
+    host: '*'
+    paths: /api/owner/mfa/reset
+    methods:
+      - POST
+  api33:
+    host: '*'
+    paths: /api/accountSettings
+    methods:
+      - GET
+      - PATCH
+  api34:
+    host: '*'
+    paths: /api/change-email
+    methods:
+      - POST
+  api166:
+    host: '*'
+    paths: /api/accountRedirection
+    methods:
+      - GET
+  api167:
+    host: '*'
+    paths: '/api/ashares/:_id'
+    methods:
+      - GET
+  api219:
+    host: '*'
+    paths: '/signin/errors/:_id'
+    methods:
+      - GET
+  api227:
+    host: '*'
+    paths: '/token-status/:token'
+    methods:
+      - GET
+  api228:
+    host: '*'
+    paths: /zendesk/widget-auth-token
+    methods:
+      - GET
+  api249:
+    host: '*'
+    paths: /v1/preferences
+    methods:
+      - GET
+      - PUT
+  api252:
+    host: '*'
+    paths: '/region/redirect/:regionName'
+    methods:
+      - GET
+  api253:
+    host: '*'
+    paths: /api/lookupcaches
+    methods:
+      - GET
+      - POST
+  api254:
+    host: '*'
+    paths: '/api/lookupcaches/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api268:
+    host: '*'
+    paths: /signin/ssoMetadata
+    methods:
+      - POST
+  api-enduser-idp-metadata:
+    host: '*'
+    paths: /signin/idpMetadata
+    methods:
+      - POST
+  api-enduser-idp-callback:
+    host: '*'
+    paths: /idp/callback
+    methods:
+      - GET
+  api-enduser-invite-metadata:
+    host: '*'
+    paths: /end-user/accept-invite-metadata
+    methods:
+      - POST
+  api-enduser-invite:
+    host: '*'
+    paths: /end-user/accept-invite
+    methods:
+      - POST
+  api270:
+    host: '*'
+    paths: /api/zendesk/token
+    methods:
+      - GET
+  api271:
+    host: '*'
+    paths: /api/ssoOrgId/validate
+    methods:
+      - PUT
+  sso-initiate-test:
+    host: '*'
+    paths: /api/sso/initiateTest
+    methods:
+      - POST
+  api272:
+    host: '*'
+    paths: '/api/trustedDevices/:_trustedDeviceId'
+    methods:
+      - POST
+      - DELETE
+  api273:
+    host: '*'
+    paths: /v1/tokenInfo
+    methods:
+      - GET
+  api279:
+    host: '*'
+    paths: /v1/oauth/accessToken
+    methods:
+      - POST
+  api281:
+    host: '*'
+    paths: /request-email-verification
+    methods:
+      - POST
+  api282:
+    host: '*'
+    paths: /verify-user
+    methods:
+      - POST
+  api283:
+    host: '*'
+    paths: /account-suggestions
+    methods:
+      - GET
+  oidc-public-1:
+    host: '*'
+    paths: /oidc/*
+    methods: '*'
+  data-catalog-v1-1:
+    host: '*'
+    paths:
+      - '/v1/di/catalog/datasets/:id'
+      - '/v1/di/catalog/datasets/:id/drift'
+    methods:
+      - GET
+  data-catalog-v1-2:
+    host: '*'
+    paths:
+      - /v1/di/catalog/datasets/publish
+    methods:
+      - PUT
+  schema-inference-v1-1:
+    host: '*'
+    paths:
+      - /v1/di/infer/schema/sync
+      - /v1/di/schema-inference-jobs
+    methods:
+      - POST
+  schema-inference-v1-2:
+    host: '*'
+    paths:
+      - '/v1/di/schema-inference-jobs/:job_id'
+    methods:
+      - GET
+  di-management-api1:
+    host: '*'
+    paths:
+      - /api/di/metadata/sources
+      - /api/di/metadata/destinations
+      - '/api/di/metadata/connections/:_connectionId/datasets'
+      - >-
+        /api/di/metadata/connections/:_connectionId/datasets/:datasetName/details
+      - '/api/di/metadata/sync/:_syncId/connections/:_connectionId/datasets'
+      - >-
+        /api/di/metadata/sync/:_syncId/connections/:_connectionId/datasets/:datasetName/details
+    methods:
+      - GET
+  di-management-api2:
+    host: '*'
+    paths:
+      - '/api/di/metadata/connections/:connectionId/datasets/query'
+      - '/api/di/metadata/connections/:connectionId/datasets/details'
+    methods:
+      - POST
+  di-management-api3:
+    host: '*'
+    paths:
+      - '/api/di/resource/syncs/:_syncId/events'
+    methods:
+      - GET
+  di-management-v1-1:
+    host: '*'
+    paths:
+      - /v1/di/metadata/sources
+      - /v1/di/metadata/destinations
+      - '/v1/di/metadata/connections/:_connectionId/datasets'
+      - '/v1/di/metadata/connections/:_connectionId/datasets/:datasetName/details'
+      - '/v1/di/metadata/sync/:_syncId/connections/:_connectionId/datasets'
+      - >-
+        /v1/di/metadata/sync/:_syncId/connections/:_connectionId/datasets/:_datasetName/details
+      - '/v1/di/resource/syncs/:_syncId/events'
+    methods:
+      - GET
+  di-management-v1-2:
+    host: '*'
+    paths:
+      - '/v1/di/metadata/connections/:connectionId/datasets/query'
+      - '/v1/di/metadata/connections/:connectionId/datasets/details'
+    methods:
+      - POST
+  di-management-v1-3:
+    host: '*'
+    paths:
+      - '/v1/di/execution/syncs/:_syncId/connections/ping'
+    methods:
+      - GET
+  di-management-v1-4:
+    host: '*'
+    paths:
+      - '/v1/di/execution/syncs/:_syncId/prepareDataSets'
+      - '/v1/di/execution/datasets/:_datasetId/prepareDataElements'
+      - '/v1/di/execution/connections/:_connectionId/syncTables'
+      - '/v1/di/execution/connections/:_connectionId/checkConstraints'
+      - '/v1/di/execution/syncs/:_syncId/initiateDataSetFlows'
+      - '/v1/di/execution/syncs/:_syncId/InitiateNextFlows'
+      - '/v1/di/execution/datasets/:_datasetId/generateschema'
+      - >-
+        /v1/di/execution/syncs/flowExecutionGroupId/:_flowExecutionGroupId/cancel
+    methods:
+      - POST
+  di-management-v1-5:
+    host: '*'
+    paths:
+      - '/v1/di/execution/syncs/:_syncId/status'
+    methods:
+      - GET
+  di-management-v1-6:
+    host: '*'
+    paths:
+      - >-
+        /v1/di/execution/syncs/:_syncId/datasets/:_datasetId/schema-inference/callback
+    methods:
+      - POST
+  di-management-v1-7:
+    host: '*'
+    paths:
+      - '/v1/di/datasets/:_datasetId'
+    methods:
+      - PATCH
+  di-management-v1-8:
+    host: '*'
+    paths:
+      - '/v1/di/datasets/:_datasetId/syncStatus'
+    methods:
+      - GET
+  featured-templates-v1-1:
+    host: '*'
+    paths: /v1/featuredTemplates
+    methods:
+      - GET
+      - POST
+  featured-templates-v1-2:
+    host: '*'
+    paths: '/v1/featuredTemplates/:_id'
+    methods:
+      - GET
+      - PUT
+  integrator-bff-api1:
+    host: '*'
+    paths: /api/bff/*
+    methods:
+      - GET
+      - POST
+      - PUT
+  agent-management-service-api-dependencies:
+    host: '*'
+    paths: '/api/agents/:_id/dependencies'
+    methods:
+      - GET
+  api176:
+    host: '*'
+    paths: '/api/agents/:_id/change-token'
+    methods:
+      - PUT
+  api177:
+    host: '*'
+    paths: /api/agents
+    methods:
+      - GET
+      - POST
+  api178:
+    host: '*'
+    paths: '/api/agents/:_id/display-token'
+    methods:
+      - GET
+  api179:
+    host: '*'
+    paths: '/api/agents/:_id/installer/signedURL'
+    methods:
+      - GET
+  api212:
+    host: '*'
+    paths: '/api/agents/:_id'
+    methods:
+      - GET
+      - PUT
+      - DELETE
+  agent-management-service-v1-dependencies:
+    host: '*'
+    paths: '/v1/agents/:_id/dependencies'
+    methods:
+      - GET
+  resource-management-api80:
+    host: '*'
+    paths: /v1/agentExtensions/heartbeat
+    methods:
+      - PUT
+  resource-management-api81:
+    host: '*'
+    paths: /v1/agentExtensions/tunnel
+    methods:
+      - PUT
+  resource-management-api82:
+    host: '*'
+    paths: /v1/agentExtensions/deployed
+    methods:
+      - PUT
+  resource-management-api83:
+    host: '*'
+    paths: /v1/agentExtensions/cycledDown
+    methods:
+      - POST
+  resource-management-api84:
+    host: '*'
+    paths: /v1/agentExtensions/servers
+    methods:
+      - POST
+  resource-management-api85:
+    host: '*'
+    paths: /v1/agentExtensions
+    methods:
+      - POST
+  resource-management-agent-api1:
+    host: '*'
+    paths: /v1/agents/heartbeat
+    methods:
+      - PUT
+  resource-management-agent-api2:
+    host: '*'
+    paths: /v1/agents/clientDetails
+    methods:
+      - PUT
+  resource-management-agent-api3:
+    host: '*'
+    paths: /v1/agents/logs
+    methods:
+      - POST
+  resource-management-agent-api4:
+    host: '*'
+    paths: '/v1/agents/:_id/change-token'
+    methods:
+      - PUT
+  resource-management-agent-api5:
+    host: '*'
+    paths: /v1/agents
+    methods:
+      - GET
+      - POST
+  resource-management-agent-api6:
+    host: '*'
+    paths: '/v1/agents/:_id/display-token'
+    methods:
+      - GET
+  resource-management-agent-api7:
+    host: '*'
+    paths: '/v1/agents/:_id/installer/signedURL'
+    methods:
+      - GET
+  resource-management-agent-api8:
+    host: '*'
+    paths: /v1/agents/updateEnabled
+    methods:
+      - GET
+  resource-management-agent-api9:
+    host: '*'
+    paths: /v1/agents/update/*
+    methods:
+      - GET
+  resource-management-agent-api10:
+    host: '*'
+    paths: '/v1/agents/release/:_version/:_os/*'
+    methods:
+      - GET
+  resource-management-agent-api11:
+    host: '*'
+    paths: '/v1/agents/:_id'
+    methods:
+      - GET
+      - PUT
+      - DELETE
+  celigo-agent-api:
+    host: '*'
+    paths: /api/celigo-agent/*
+    methods:
+      - GET
+      - POST
+      - PUT
+      - DELETE
+      - PATCH
+  celigo-agent-websocket:
+    host: '*'
+    paths: /api/celigo-agent/voice/ws
+    methods:
+      - GET
+  api197:
+    host: '*'
+    paths: /api/audit
+    methods:
+      - GET
+      - POST
+  api198:
+    host: '*'
+    paths: /api/audit/signedURL
+    methods:
+      - GET
+      - POST
+  api199:
+    host: '*'
+    paths: '/api/:modelPlural/audit/signedURL'
+    methods:
+      - POST
+  api200:
+    host: '*'
+    paths: '/api/:modelPlural/:_id/audit'
+    methods:
+      - GET
+      - POST
+  resource-management-api152:
+    host: '*'
+    paths: /v1/audit
+    methods:
+      - GET
+  resource-management-api153:
+    host: '*'
+    paths: /v1/audit/signedURL
+    methods:
+      - GET
+  resource-management-api154:
+    host: '*'
+    paths: '/v1/:modelPlural/audit/signedURL'
+    methods:
+      - POST
+  resource-management-api155:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/audit'
+    methods:
+      - GET
+  audit-service-api1:
+    host: '*'
+    paths: /v1/audit
+    methods:
+      - POST
+  audit-service-api2:
+    host: '*'
+    paths: /v1/audit/signedURL
+    methods:
+      - POST
+  audit-service-api3:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/audit'
+    methods:
+      - POST
+  audit-service-api4:
+    host: '*'
+    paths: /api/audit
+    methods:
+      - POST
+  audit-service-api5:
+    host: '*'
+    paths: /api/audit/signedURL
+    methods:
+      - POST
+  audit-service-api6:
+    host: '*'
+    paths: '/api/:modelPlural/:_id/audit'
+    methods:
+      - POST
+  edi-service-api-signedurl:
+    host: '*'
+    paths: /api/ediTransactions/signedURL
+    methods:
+      - GET
+  edi-service-api-fadetails:
+    host: '*'
+    paths: '/api/ediTransactions/:_ediTransactionId/faDetails'
+    methods:
+      - GET
+  edi-service-api-transactions-patch:
+    host: '*'
+    paths: /api/ediTransactions
+    methods:
+      - PATCH
+  edi-service-api-query:
+    host: '*'
+    paths: /api/ediTransactions/query
+    methods:
+      - POST
+  edi-service-api-profiles-generate:
+    host: '*'
+    paths: /api/ediprofiles/generate
+    methods:
+      - POST
+  edi-service-api-edifile:
+    host: '*'
+    paths: '/api/ediTransactions/:_transactionId/ediFile'
+    methods:
+      - GET
+  edi-service-api-mdn:
+    host: '*'
+    paths: '/api/ediTransactions/:_transactionId/mdn'
+    methods:
+      - GET
+  edi-service-v1-signedurl:
+    host: '*'
+    paths: /v1/ediTransactions/signedURL
+    methods:
+      - GET
+  edi-service-v1-fadetails:
+    host: '*'
+    paths: '/v1/ediTransactions/:_ediTransactionId/faDetails'
+    methods:
+      - GET
+  edi-service-v1-transactions-patch:
+    host: '*'
+    paths: /v1/ediTransactions
+    methods:
+      - PATCH
+  edi-service-v1-query:
+    host: '*'
+    paths: /v1/ediTransactions/query
+    methods:
+      - POST
+  edi-service-v1-edifile:
+    host: '*'
+    paths: '/v1/edi/documents/:documentNumber/ediFile'
+    methods:
+      - GET
+  edi-service-v1-mdn:
+    host: '*'
+    paths: '/v1/ediTransactions/:_transactionId/mdn'
+    methods:
+      - GET
+  edi-service-processors-api-parser:
+    host: '*'
+    paths: /api/processors/structuredFileParser
+    methods:
+      - POST
+  edi-service-processors-api-generator:
+    host: '*'
+    paths: /api/processors/structuredFileGenerator
+    methods:
+      - POST
+  edi-service-processors-v1-parser:
+    host: '*'
+    paths: /v1/processors/structuredFileParser
+    methods:
+      - POST
+  edi-service-processors-v1-generator:
+    host: '*'
+    paths: /v1/processors/structuredFileGenerator
+    methods:
+      - POST
+  flowmgmt-api9:
+    host: '*'
+    paths:
+      - /api/flows/events
+    methods:
+      - GET
+  flowmgmt-v17:
+    host: '*'
+    paths:
+      - /v1/flows/events
+    methods:
+      - GET
+  flowmgmt-v18:
+    host: '*'
+    paths: '/v1/connections/:_id/purgeMessages'
+    methods:
+      - POST
+  flowmgmt-v19:
+    host: '*'
+    paths: '/v1/flows/:_flowId/jobs/cancel'
+    methods:
+      - POST
+  flowmgmt-api1:
+    host: '*'
+    paths:
+      - /api/errors/filterMetadata
+      - '/api/flows/:_flowId/errors'
+      - '/api/flows/:_flowId/:_expOrImpId/errors'
+      - '/api/flows/:_flowId/:_expOrImpId/resolved'
+      - '/api/flows/:_flowId/:_expOrImpId/errors/signedURL'
+      - '/api/flows/:_flowId/:_expOrImpId/resolved/signedURL'
+      - '/api/integrations/:_integrationId/errors'
+      - '/api/flows/:_flowId/:_expOrImpId/:retryDataKey/data'
+      - '/api/flows/:_flowId/:_expOrImpId/:key/signedURL'
+      - '/api/flows/:_flowId/traceKey'
+      - '/api/jobs/:_jobId/family'
+      - '/api/connections/:_id/jobs'
+      - '/api/flows/:_flowId/jobs/latest'
+      - '/api/integrations/:_integrationId/jobs/latest'
+      - '/api/connections/:_id/debug/:typeId'
+      - '/api/connections/:_id/debug'
+      - /api/notifications
+      - /api/alerts
+      - /api/jobs
+      - '/api/jobs/:_jobId'
+    methods:
+      - GET
+  flowmgmt-api2:
+    host: '*'
+    paths:
+      - '/api/flows/:_flowId/:_expOrImpId/retry'
+      - /api/stats/tsdb
+      - '/api/flows/:_flowId/:_expOrImpId/retry_with_exponential_decay'
+      - '/api/jobs/:_jobId/files/signedURL'
+      - /api/jobs/family
+      - /api/jobs/current
+      - /api/flows/runs/stats
+      - '/api/flows/:_flowId/runs/stats'
+      - '/api/flows/:_id/run'
+      - /api/eventreports
+      - '/api/syncs/:_syncId/run'
+      - /api/alerts
+    methods:
+      - POST
+  flowmgmt-api3:
+    host: '*'
+    paths:
+      - '/api/flows/:_flowId/:_expOrImpId/resolved'
+      - '/api/flows/:_flowId/:_expOrImpId/:retryDataKey/data'
+      - '/api/jobs/:_jobId/cancel'
+      - /api/notifications
+      - '/api/alerts/:_id'
+      - '/api/eventreports/:_id/cancel'
+      - '/api/flows/:_flowId/:_expOrImpId/tags'
+      - '/api/flows/:_flowId/:_expOrImpId/errors/assign'
+      - '/api/flows/:_flowId/:_expOrImpId/errors/unassign'
+    methods:
+      - PUT
+  flowmgmt-api4:
+    host: '*'
+    paths:
+      - '/api/flows/:_flowId/:_expOrImpId/resolved'
+      - '/api/jobs/:_jobId/files'
+      - '/api/flows/:_flowId/:_expOrImpId/requests'
+      - '/api/scripts/:_scriptId/logs'
+      - '/api/connections/:_id/debug'
+      - '/api/apis/:_apiId/logs'
+      - '/api/mcpservers/:_mcpServerId/logs'
+      - '/api/apis/:_apiId/:_expOrImpId/requests'
+      - '/api/tools/:_toolId/logs'
+      - '/api/tools/:_toolId/:_expOrImpId/requests'
+      - '/api/alerts/:_id'
+    methods:
+      - DELETE
+  flowmgmt-api5:
+    host: '*'
+    paths:
+      - '/api/flows/:_flowId/:_expOrImpId/requests'
+      - '/api/flows/:_flowId/:_expOrImpId/requests/:key'
+      - '/api/flows/:_flowId/:_expOrImpId/requests/:key/files/signedURL'
+      - '/api/flows/:_id/lastExportDateTime'
+      - '/api/flows/:_flowId/events'
+      - /api/eventreports
+      - '/api/eventreports/:_id'
+      - '/api/eventreports/:_id/signedURL'
+      - '/api/alerts/:_id'
+      - '/api/scripts/:_scriptId/logs'
+      - '/api/flows/:_flowId/test/run/:_flowJobId/:_expOrImpId'
+      - '/api/flows/:_flowId/test/run/:_flowJobId/:_expOrImpId/logs/:type'
+      - '/api/flows/:_flowId/test/run/:_flowJobId/scripts/:_scriptId/logs'
+      - '/api/tools/:_toolId/test/run/:_parentJobId/:resourceType'
+      - '/api/tools/:_toolId/test/run/:_parentJobId/:_expOrImpId/logs/:type'
+      - '/api/tools/:_toolId/test/run/:_parentJobId/scripts/:_scriptId/logs'
+    methods:
+      - GET
+  flowmgmt-api6:
+    host: '*'
+    paths:
+      - /api/ui/assistants
+      - '/api/ui/assistants/:_assistantId'
+      - '/api/ui/assistants/http/:_assistantId'
+      - /api/ui/filedefinitions
+      - /api/ui/filedefinitions/v1
+      - '/api/ui/filedefinitions/:_filedefinitionId'
+      - '/api/ui/filedefinitions/v1/:_filedefinitionId'
+      - '/api/apis/:_apiId/logs'
+      - '/api/apis/:_apiId/logs/:key'
+      - '/api/apis/:_apiId/requests'
+      - '/api/apis/:_apiId/requests/:executionId'
+      - >-
+        /api/apis/:_apiId/requests/:executionId/:_expOrImpId/logs/:parentRecordId/children
+      - '/api/apis/:_apiId/requests/:executionId/logs/signedURL'
+      - '/api/apis/:_apiId/test/run/:_parentJobId/scripts/:_scriptId/logs'
+      - '/api/apis/:_apiId/test/run/:_parentJobId/:resourceType'
+      - '/api/apis/:_apiId/test/run/:_parentJobId/:_expOrImpId/logs/:type'
+      - '/api/apis/:_apiId/:_expOrImpId/requests'
+      - '/api/apis/:_apiId/:_expOrImpId/requests/:key'
+      - '/api/mcpservers/:_mcpServerId/logs'
+      - '/api/mcpservers/:_mcpServerId/logs/:key'
+      - '/api/tools/:_toolId/logs'
+      - '/api/tools/:_toolId/logs/:key'
+      - '/api/tools/:_toolId/invocations'
+      - '/api/tools/:_toolId/invocations/:executionId'
+      - '/api/tools/:_toolId/invocations/:executionId/:_expOrImpId/logs/:parentRecordId/children'
+      - '/api/tools/:_toolId/invocations/:executionId/logs/signedURL'
+      - '/api/tools/:_toolId/:_expOrImpId/requests'
+      - '/api/tools/:_toolId/:_expOrImpId/requests/:key'
+    methods:
+      - GET
+  flowmgmt-api7:
+    host: '*'
+    paths:
+      - /api/fieldhelp
+      - /api/assistantsFeedback
+      - '/api/logInSplunk/:logName'
+    methods:
+      - POST
+  flowmgmt-api10:
+    host: '*'
+    paths:
+      - '/api/syncs/:_syncId/syncJobs'
+      - '/api/syncJobs/:_syncJobId'
+      - '/api/integrations/:_integrationId/syncJobs/latest'
+      - '/api/syncJobs/:_syncJobId/family'
+      - '/api/syncJobs/:_parentJobId/errors'
+    methods:
+      - GET
+  flowmgmt-api11:
+    host: '*'
+    paths:
+      - '/api/flows/:_flowId/jobs/:_flowJobId/logs'
+      - >-
+        /api/flows/:_flowId/jobs/:_flowJobId/:_expOrImpId/logs/:_parentRecordId/children
+      - '/api/flows/:_flowId/jobs/search'
+      - '/api/flows/:_flowId/jobs/:_flowJobId/logs/signedURL'
+    methods:
+      - GET
+  flowmgmt-api12:
+    host: '*'
+    paths:
+      - '/api/flows/:_flowId/jobs/:_flowJobId/logs/metadata/query'
+      - '/api/flows/:_flowId/jobs/:_flowJobId/logs/data/query'
+      - '/api/apis/:_apiId/requests/:executionId/logs/data/query'
+      - '/api/tools/:_toolId/invocations/:executionId/logs/data/query'
+    methods:
+      - POST
+  flowmgmt-api13:
+    host: '*'
+    paths:
+      - '/api/syncs/:_syncId/syncJobs/cancel'
+      - '/api/syncJobs/:_syncJobId/cancel'
+    methods:
+      - PUT
+  flowmgmt-api14:
+    host: '*'
+    paths:
+      - '/api/flows/:_flowId/logs'
+      - '/api/apis/:_apiId/requests'
+      - '/api/tools/:_toolId/invocations'
+    methods:
+      - DELETE
+  flowmgmt-v11:
+    host: '*'
+    paths:
+      - /v1/errors/filterMetadata
+      - '/v1/flows/:_flowId/errors'
+      - '/v1/flows/:_flowId/:_expOrImpId/errors'
+      - '/v1/flows/:_flowId/:_expOrImpId/resolved'
+      - '/v1/flows/:_flowId/:_expOrImpId/errors/signedURL'
+      - '/v1/flows/:_flowId/:_expOrImpId/resolved/signedURL'
+      - '/v1/integrations/:_integrationId/errors'
+      - '/v1/flows/:_flowId/:_expOrImpId/:retryDataKey/data'
+      - '/v1/flows/:_flowId/:_expOrImpId/:key/signedURL'
+      - '/v1/flows/:_flowId/traceKey'
+      - '/v1/jobs/:_jobId/family'
+      - '/v1/connections/:_id/jobs'
+      - '/v1/flows/:_flowId/jobs/latest'
+      - '/v1/integrations/:_integrationId/jobs/latest'
+      - '/v1/connections/:_id/debug/:typeId'
+      - '/v1/connections/:_id/debug'
+      - /v1/notifications
+      - /v1/alerts
+      - /v1/jobs
+      - '/v1/jobs/:_jobId'
+    methods:
+      - GET
+  flowmgmt-v12:
+    host: '*'
+    paths:
+      - '/v1/flows/:_flowId/:_expOrImpId/retry'
+      - /v1/stats/tsdb
+      - '/v1/flows/:_flowId/:_expOrImpId/retry_with_exponential_decay'
+      - '/v1/jobs/:_jobId/files/signedURL'
+      - /v1/jobs/family
+      - /v1/jobs/current
+      - /v1/flows/runs/stats
+      - '/v1/flows/:_flowId/runs/stats'
+      - '/v1/flows/:_id/run'
+      - /v1/eventreports
+      - '/v1/syncs/:_syncId/run'
+      - /v1/alerts
+    methods:
+      - POST
+  flowmgmt-v13:
+    host: '*'
+    paths:
+      - '/v1/flows/:_flowId/:_expOrImpId/resolved'
+      - '/v1/flows/:_flowId/:_expOrImpId/:retryDataKey/data'
+      - '/v1/jobs/:_jobId/cancel'
+      - /v1/notifications
+      - '/v1/alerts/:_id'
+      - '/v1/eventreports/:_id/cancel'
+      - '/v1/flows/:_flowId/:_expOrImpId/tags'
+      - '/v1/flows/:_flowId/:_expOrImpId/errors/assign'
+      - '/v1/flows/:_flowId/:_expOrImpId/errors/unassign'
+    methods:
+      - PUT
+  flowmgmt-v14:
+    host: '*'
+    paths:
+      - '/v1/flows/:_flowId/:_expOrImpId/resolved'
+      - '/v1/jobs/:_jobId/files'
+      - '/v1/flows/:_flowId/:_expOrImpId/requests'
+      - '/v1/scripts/:_scriptId/logs'
+      - '/v1/connections/:_id/debug'
+      - '/v1/apis/:_apiId/logs'
+      - '/v1/apis/:_apiId/requests'
+      - '/v1/apis/:_apiId/:_expOrImpId/requests'
+      - '/v1/tools/:_toolId/logs'
+      - '/v1/tools/:_toolId/invocations'
+      - '/v1/tools/:_toolId/:_expOrImpId/requests'
+      - '/v1/alerts/:_id'
+    methods:
+      - DELETE
+  flowmgmt-v15:
+    host: '*'
+    paths:
+      - '/v1/flows/:_flowId/:_expOrImpId/requests'
+      - '/v1/flows/:_flowId/:_expOrImpId/requests/:key'
+      - '/v1/flows/:_flowId/:_expOrImpId/requests/:key/files/signedURL'
+      - '/v1/flows/:_id/lastExportDateTime'
+      - '/v1/flows/:_flowId/events'
+      - /v1/eventreports
+      - '/v1/eventreports/:_id'
+      - '/v1/eventreports/:_id/signedURL'
+      - '/v1/alerts/:_id'
+      - '/v1/scripts/:_scriptId/logs'
+      - '/v1/flows/:_flowId/test/run/:_flowJobId/:_expOrImpId'
+      - '/v1/flows/:_flowId/test/run/:_flowJobId/:_expOrImpId/logs/:type'
+      - '/v1/flows/:_flowId/test/run/:_flowJobId/scripts/:_scriptId/logs'
+      - '/v1/apis/:_apiId/logs'
+      - '/v1/apis/:_apiId/logs/:key'
+      - '/v1/apis/:_apiId/requests'
+      - '/v1/apis/:_apiId/requests/:executionId'
+      - >-
+        /v1/apis/:_apiId/requests/:executionId/:_expOrImpId/logs/:parentRecordId/children
+      - '/v1/apis/:_apiId/requests/:executionId/logs/signedURL'
+      - '/v1/apis/:_apiId/test/run/:_parentJobId/scripts/:_scriptId/logs'
+      - '/v1/apis/:_apiId/test/run/:_parentJobId/:resourceType'
+      - '/v1/apis/:_apiId/test/run/:_parentJobId/:_expOrImpId/logs/:type'
+      - '/v1/apis/:_apiId/:_expOrImpId/requests'
+      - '/v1/apis/:_apiId/:_expOrImpId/requests/:key'
+      - '/v1/tools/:_toolId/test/run/:_parentJobId/:resourceType'
+      - '/v1/tools/:_toolId/test/run/:_parentJobId/:_expOrImpId/logs/:type'
+      - '/v1/tools/:_toolId/test/run/:_parentJobId/scripts/:_scriptId/logs'
+      - '/v1/tools/:_toolId/logs'
+      - '/v1/tools/:_toolId/logs/:key'
+      - '/v1/tools/:_toolId/invocations'
+      - '/v1/tools/:_toolId/invocations/:executionId'
+      - '/v1/tools/:_toolId/invocations/:executionId/:_expOrImpId/logs/:parentRecordId/children'
+      - '/v1/tools/:_toolId/invocations/:executionId/logs/signedURL'
+      - '/v1/tools/:_toolId/:_expOrImpId/requests'
+      - '/v1/tools/:_toolId/:_expOrImpId/requests/:key'
+    methods:
+      - GET
+  flowmgmt-v20:
+    host: '*'
+    paths:
+      - '/v1/syncs/:_syncId/syncJobs'
+      - '/v1/syncJobs/:_syncJobId'
+      - '/v1/integrations/:_integrationId/syncJobs/latest'
+      - '/v1/syncJobs/:_syncJobId/family'
+      - '/v1/syncJobs/:_parentJobId/errors'
+    methods:
+      - GET
+  flowmgmt-v21:
+    host: '*'
+    paths:
+      - '/v1/flows/:_flowId/jobs/:_flowJobId/logs'
+      - >-
+        /v1/flows/:_flowId/jobs/:_flowJobId/:_expOrImpId/logs/:_parentRecordId/children
+      - '/v1/flows/:_flowId/jobs/search'
+      - '/v1/flows/:_flowId/jobs/:_flowJobId/logs/signedURL'
+    methods:
+      - GET
+  flowmgmt-v22:
+    host: '*'
+    paths:
+      - '/v1/flows/:_flowId/jobs/:_flowJobId/logs/metadata/query'
+      - '/v1/flows/:_flowId/jobs/:_flowJobId/logs/data/query'
+      - '/v1/apis/:_apiId/requests/:executionId/logs/data/query'
+      - '/v1/tools/:_toolId/invocations/:executionId/logs/data/query'
+    methods:
+      - POST
+  flowmgmt-v23:
+    host: '*'
+    paths:
+      - '/v1/syncs/:_syncId/syncJobs/cancel'
+      - '/v1/syncJobs/:_syncJobId/cancel'
+      - '/v1/flowExecutionGroups/:_flowExecutionGroupId/cancel'
+    methods:
+      - PUT
+  flowmgmt-v24:
+    host: '*'
+    paths:
+      - '/v1/flows/:_flowId/logs'
+    methods:
+      - DELETE
+  file-storage-internal-callback:
+    host: '*'
+    paths: /v1/storage/internal/callback
+    methods:
+      - POST
+  file-storage-v1:
+    host: '*'
+    paths: /v1/storage/*
+    methods:
+      - GET
+      - POST
+      - PUT
+      - PATCH
+      - DELETE
+  file-storage-api:
+    host: '*'
+    paths: /api/storage/*
+    methods:
+      - GET
+      - POST
+      - PUT
+      - PATCH
+      - DELETE
+  api35:
+    host: '*'
+    paths: /api/apis
+    methods:
+      - GET
+      - POST
+  api36:
+    host: '*'
+    paths: /api/accesstokens
+    methods:
+      - GET
+      - POST
+  api37:
+    host: '*'
+    paths: /api/clients
+    methods:
+      - GET
+      - POST
+  api38:
+    host: '*'
+    paths: /api/connectors
+    methods:
+      - GET
+      - POST
+  api39:
+    host: '*'
+    paths: /api/templates
+    methods:
+      - GET
+      - POST
+  api40:
+    host: '*'
+    paths: /api/iclients
+    methods:
+      - GET
+      - POST
+  api41:
+    host: '*'
+    paths: /api/imports
+    methods:
+      - GET
+      - POST
+  api42:
+    host: '*'
+    paths: /api/exports
+    methods:
+      - GET
+      - POST
+  api43:
+    host: '*'
+    paths: /api/flows
+    methods:
+      - GET
+      - POST
+  api44:
+    host: '*'
+    paths: /api/integrations
+    methods:
+      - GET
+      - POST
+  api45:
+    host: '*'
+    paths: /api/connections
+    methods:
+      - GET
+      - POST
+  api46:
+    host: '*'
+    paths: /api/stacks
+    methods:
+      - GET
+      - POST
+  api47:
+    host: '*'
+    paths: /api/scripts
+    methods:
+      - GET
+      - POST
+  api48:
+    host: '*'
+    paths: /api/asynchelpers
+    methods:
+      - GET
+      - POST
+  api49:
+    host: '*'
+    paths: /api/filedefinitions
+    methods:
+      - GET
+      - POST
+  api50:
+    host: '*'
+    paths: /api/jobs
+    methods:
+      - POST
+  api51:
+    host: '*'
+    paths: /api/ssoclients
+    methods:
+      - GET
+      - POST
+  api52:
+    host: '*'
+    paths: /api/tags
+    methods:
+      - GET
+      - POST
+  api53:
+    host: '*'
+    paths: '/api/apis/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api54:
+    host: '*'
+    paths: '/api/accesstokens/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api55:
+    host: '*'
+    paths: '/api/clients/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api56:
+    host: '*'
+    paths: '/api/connectors/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api57:
+    host: '*'
+    paths: '/api/templates/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api58:
+    host: '*'
+    paths: '/api/iclients/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api59:
+    host: '*'
+    paths: '/api/imports/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api60:
+    host: '*'
+    paths: '/api/exports/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api61:
+    host: '*'
+    paths: '/api/flows/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api62:
+    host: '*'
+    paths: '/api/integrations/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api63:
+    host: '*'
+    paths: '/api/connections/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api64:
+    host: '*'
+    paths: '/api/stacks/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api65:
+    host: '*'
+    paths: '/api/scripts/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api66:
+    host: '*'
+    paths: '/api/asynchelpers/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api67:
+    host: '*'
+    paths: '/api/filedefinitions/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api68:
+    host: '*'
+    paths: '/api/jobs/:_id'
+    methods:
+      - PUT
+      - PATCH
+      - DELETE
+  api69:
+    host: '*'
+    paths: '/api/ssoclients/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api70:
+    host: '*'
+    paths: '/api/tags/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api71:
+    host: '*'
+    paths: '/api/flows/:_flowId/descendants'
+    methods:
+      - GET
+  api72:
+    host: '*'
+    paths: '/api/:modelPlural/:_id/dependencies'
+    methods:
+      - GET
+  api73:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/flows'
+    methods:
+      - GET
+  api74:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/exports'
+    methods:
+      - GET
+  api75:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/imports'
+    methods:
+      - GET
+  api76:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/connections'
+    methods:
+      - GET
+  api77:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/asynchelpers'
+    methods:
+      - GET
+  api78:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/filedefinitions'
+    methods:
+      - GET
+  api79:
+    host: '*'
+    paths: '/api/stacks/:_id/invite'
+    methods:
+      - POST
+  api80:
+    host: '*'
+    paths: '/api/sshares/:_id/reinvite'
+    methods:
+      - PUT
+  api81:
+    host: '*'
+    paths: /api/sshares
+    methods:
+      - GET
+      - POST
+  api82:
+    host: '*'
+    paths: /api/shared/sshares
+    methods:
+      - GET
+  api83:
+    host: '*'
+    paths: '/api/sshares/:_id/accept'
+    methods:
+      - PUT
+  api84:
+    host: '*'
+    paths: '/api/sshares/:_id/dismiss'
+    methods:
+      - PUT
+  api85:
+    host: '*'
+    paths: /api/shared/stacks
+    methods:
+      - GET
+  api86:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/connections'
+    methods:
+      - POST
+  api87:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/connections/:_connectionId/register'
+    methods:
+      - PUT
+      - DELETE
+  api88:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/connections/register'
+    methods:
+      - PUT
+  api316:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/lookupcaches/:_lookupCacheId/register'
+    methods:
+      - DELETE
+      - PUT
+  api89:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/tree/metadata'
+    methods:
+      - GET
+  api90:
+    host: '*'
+    paths: '/api/stacks/:_id/systemToken'
+    methods:
+      - GET
+      - DELETE
+  api91:
+    host: '*'
+    paths: '/api/connectors/:_connectorId/licenses'
+    methods:
+      - GET
+      - POST
+  api92:
+    host: '*'
+    paths: '/api/connectors/:_connectorId/licenses/:_licenseId'
+    methods:
+      - GET
+      - PUT
+      - DELETE
+  api93:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/ashares'
+    methods:
+      - GET
+  api94:
+    host: '*'
+    paths: /api/invite
+    methods:
+      - POST
+  api95:
+    host: '*'
+    paths: /api/ashares
+    methods:
+      - GET
+      - POST
+  api96:
+    host: '*'
+    paths: /api/shared/ashares
+    methods:
+      - GET
+  api97:
+    host: '*'
+    paths: '/api/shared/ashares/:_id'
+    methods:
+      - DELETE
+  api98:
+    host: '*'
+    paths: '/api/ashares/:_id'
+    methods:
+      - PUT
+      - DELETE
+      - PATCH
+  api99:
+    host: '*'
+    paths: '/api/ashares/:_id/disable'
+    methods:
+      - PUT
+  api100:
+    host: '*'
+    paths: '/api/ashares/:_id/reinvite'
+    methods:
+      - PUT
+  api101:
+    host: '*'
+    paths: '/api/ashares/:_id/accept'
+    methods:
+      - PUT
+  api102:
+    host: '*'
+    paths: '/api/ashares/:_id/dismiss'
+    methods:
+      - PUT
+  api103:
+    host: '*'
+    paths: '/api/sshares/:_id/disable'
+    methods:
+      - PUT
+  api104:
+    host: '*'
+    paths: '/api/flows/:_flowId/replaceConnection'
+    methods:
+      - PUT
+  api105:
+    host: '*'
+    paths: '/api/exports/:_exportId/replaceConnection'
+    methods:
+      - PUT
+  api106:
+    host: '*'
+    paths: '/api/imports/:_importId/replaceConnection'
+    methods:
+      - PUT
+  api107:
+    host: '*'
+    paths: '/api/accesstokens/:_tokenId/display'
+    methods:
+      - GET
+  api108:
+    host: '*'
+    paths: '/api/accesstokens/:_tokenId/generate'
+    methods:
+      - POST
+  api109:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/revisions/create'
+    methods:
+      - POST
+  api110:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/revisions/:_revisionId'
+    methods:
+      - GET
+  api111:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/revisions/:_revisionId/diff'
+    methods:
+      - GET
+  api112:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/revisions/:_revisionId/errors'
+    methods:
+      - GET
+  api113:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/revisions'
+    methods:
+      - GET
+  api114:
+    host: '*'
+    paths: /api/invite/multiple
+    methods:
+      - POST
+  api115:
+    host: '*'
+    paths: '/api/connections/:_connectionId/iclients'
+    methods:
+      - GET
+  api116:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/iclients'
+    methods:
+      - GET
+  api117:
+    host: '*'
+    paths: '/api/iclients/:clientId/integrations'
+    methods:
+      - GET
+  api118:
+    host: '*'
+    paths: /api/licenses/request
+    methods:
+      - POST
+  api119:
+    host: '*'
+    paths: /api/licenses/retrialRequest
+    methods:
+      - POST
+  api120:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/accesstokens'
+    methods:
+      - POST
+  api121:
+    host: '*'
+    paths: /api/s3SignedURL
+    methods:
+      - GET
+  api122:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/changeEdition'
+    methods:
+      - POST
+  api123:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/initChild'
+    methods:
+      - POST
+  api124:
+    host: '*'
+    paths: >-
+      /api/integrations/:_integrationId/flowGroupings/:_flowGroupingId/settingsForm/init
+    methods:
+      - POST
+  api125:
+    host: '*'
+    paths: '/api/integrations/:_id/:functionType/:function'
+    methods:
+      - PUT
+  api126:
+    host: '*'
+    paths: '/api/integrations/:_id/preUninstall'
+    methods:
+      - PUT
+  api127:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/installSteps'
+    methods:
+      - GET
+      - POST
+  api128:
+    host: '*'
+    paths: '/api/integrations/:_connectorId/install'
+    methods:
+      - POST
+  api129:
+    host: '*'
+    paths: '/api/:modelPlural/:_id/settingsForm/init'
+    methods:
+      - POST
+  api130:
+    host: '*'
+    paths: '/api/connectors/:_id/update'
+    methods:
+      - PUT
+  api131:
+    host: '*'
+    paths: '/api/connectors/:_id/installBase'
+    methods:
+      - GET
+  api132:
+    host: '*'
+    paths: '/api/integrations/:_connectorId/installFromExternal/:application'
+    methods:
+      - GET
+  api133:
+    host: '*'
+    paths: /api/published
+    methods:
+      - GET
+  api134:
+    host: '*'
+    paths: /api/templates/published
+    methods:
+      - GET
+  api135:
+    host: '*'
+    paths: '/api/templates/:_templateId/upload/signedURL'
+    methods:
+      - GET
+  api136:
+    host: '*'
+    paths: '/api/templates/:_templateId/download/signedURL'
+    methods:
+      - GET
+  api137:
+    host: '*'
+    paths: /api/published/combined
+    methods:
+      - POST
+  api138:
+    host: '*'
+    paths: /api/frequentlyInstalledApps
+    methods:
+      - GET
+  api139:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/template'
+    methods:
+      - GET
+  api140:
+    host: '*'
+    paths: '/api/flows/:_id/template'
+    methods:
+      - GET
+  api141:
+    host: '*'
+    paths: '/api/integrations/template/:_templateId'
+    methods:
+      - POST
+  api142:
+    host: '*'
+    paths: /api/integrations/template
+    methods:
+      - POST
+  api143:
+    host: '*'
+    paths: '/api/templates/:_templateId/upload'
+    methods:
+      - POST
+  api144:
+    host: '*'
+    paths: /api/integrations/template/preview
+    methods:
+      - GET
+  api145:
+    host: '*'
+    paths: '/api/integrations/:_id/detachLicense'
+    methods:
+      - PUT
+  api146:
+    host: '*'
+    paths: '/api/templates/:_templateId/preview'
+    methods:
+      - GET
+  api147:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/clonefamily'
+    methods:
+      - GET
+  api148:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/pull/:_cloneIntegrationId/compare'
+    methods:
+      - POST
+  api149:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/pull/:_cloneIntegrationId/open'
+    methods:
+      - POST
+  api150:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/revisions/:_revisionId/cancel'
+    methods:
+      - POST
+  api151:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/revisions/:_revisionId/installSteps'
+    methods:
+      - POST
+  api152:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/revisions/cancel'
+    methods:
+      - POST
+  api153:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/revisions/:_revisionId/revert/compare'
+    methods:
+      - POST
+  api154:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/revisions/:_revisionId/revert/open'
+    methods:
+      - POST
+  api155:
+    host: '*'
+    paths: '/api/connectors/:_connectorId/install'
+    methods:
+      - POST
+  api156:
+    host: '*'
+    paths: '/api/:modelPlural/:_id/clone/preview'
+    methods:
+      - GET
+  api157:
+    host: '*'
+    paths:
+      - '/api/:modelPlural/:_id/clone'
+      - '/api/apis/:_id/clone/validate'
+    methods:
+      - POST
+  api158:
+    host: '*'
+    paths: '/api/integrations/:_id/install'
+    methods:
+      - DELETE
+  api159:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/aliases'
+    methods:
+      - GET
+  api160:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/changeEditionSteps'
+    methods:
+      - GET
+      - POST
+  api161:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/flows/:_flowId/aliases'
+    methods:
+      - GET
+  api162:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/currentStep'
+    methods:
+      - GET
+  api163:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/initUninstall'
+    methods:
+      - POST
+  api164:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/uninstallsteps'
+    methods:
+      - GET
+      - POST
+  api165:
+    host: '*'
+    paths: '/api/connectors/:_connectorId/preview'
+    methods:
+      - GET
+  api168:
+    host: '*'
+    paths: /api/transfers
+    methods:
+      - GET
+  api169:
+    host: '*'
+    paths: /api/transfers/preview
+    methods:
+      - GET
+  api170:
+    host: '*'
+    paths: /api/transfers/invite
+    methods:
+      - POST
+  api171:
+    host: '*'
+    paths: '/api/transfers/:_id/accept'
+    methods:
+      - PUT
+  api172:
+    host: '*'
+    paths: '/api/transfers/:_id/dismiss'
+    methods:
+      - PUT
+  api173:
+    host: '*'
+    paths: '/api/transfers/:_id/cancel'
+    methods:
+      - PUT
+  api174:
+    host: '*'
+    paths: '/api/transfers/:_id'
+    methods:
+      - DELETE
+  api175:
+    host: '*'
+    paths: /api/transfers/invited
+    methods:
+      - GET
+  api180:
+    host: '*'
+    paths: /api/flows/updateFlowGrouping
+    methods:
+      - PUT
+  api181:
+    host: '*'
+    paths: '/api/connections/:_connectionId/tradingPartner'
+    methods:
+      - GET
+      - PUT
+  api182:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/resume'
+    methods:
+      - PUT
+  api183:
+    host: '*'
+    paths: /api/resume
+    methods:
+      - PUT
+  api184:
+    host: '*'
+    paths: '/api/connectors/:_connectorId/licenses/:_licenseId/upgradeRequest'
+    methods:
+      - POST
+  api185:
+    host: '*'
+    paths: '/api/connectors/:_connectorId/licenses/:_licenseId/renewRequest'
+    methods:
+      - POST
+  api186:
+    host: '*'
+    paths: /api/licenses/upgradeRequest
+    methods:
+      - POST
+  api187:
+    host: '*'
+    paths: /api/licenses/renewRequest
+    methods:
+      - POST
+  api188:
+    host: '*'
+    paths: /api/licenses
+    methods:
+      - GET
+  api189:
+    host: '*'
+    paths: /api/licenses/startTrial
+    methods:
+      - POST
+  api190:
+    host: '*'
+    paths: /api/licenseEntitlementUsage
+    methods:
+      - GET
+  api191:
+    host: '*'
+    paths: /api/recycleBinTTL
+    methods:
+      - GET
+  api192:
+    host: '*'
+    paths: '/api/recycleBinTTL/:modelPlural'
+    methods:
+      - GET
+  api193:
+    host: '*'
+    paths: '/api/recycleBinTTL/:modelPlural/:_id'
+    methods:
+      - GET
+      - POST
+      - DELETE
+  api194:
+    host: '*'
+    paths: '/api/recycleBinTTL/:modelPlural/:_id/doCascadeRestore'
+    methods:
+      - POST
+  api195:
+    host: '*'
+    paths: /api/tiles
+    methods:
+      - GET
+  api196:
+    host: '*'
+    paths: '/api/tiles/:_integrationId'
+    methods:
+      - GET
+  api201:
+    host: '*'
+    paths: /api/httpconnectors
+    methods:
+      - GET
+      - POST
+  api202:
+    host: '*'
+    paths: '/api/httpconnectors/:_httpConnectorId'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api203:
+    host: '*'
+    paths: '/api/httpconnectors/:_httpConnectorId/httpconnectorresources'
+    methods:
+      - GET
+  api204:
+    host: '*'
+    paths: '/api/httpconnectors/:_httpConnectorId/:_httpConnectorResourceId'
+    methods:
+      - GET
+  api205:
+    host: '*'
+    paths: >-
+      /api/httpconnectors/:_httpConnectorId/:_httpConnectorResourceId/httpconnectorendpoints
+    methods:
+      - GET
+  api206:
+    host: '*'
+    paths: >-
+      /api/httpconnectors/:_httpConnectorId/:_httpConnectorResourceId/:_httpConnectorEndpointId
+    methods:
+      - GET
+  api207:
+    host: '*'
+    paths: /api/revisions
+    methods:
+      - GET
+      - POST
+  api208:
+    host: '*'
+    paths: /api/httpconnectorresources
+    methods:
+      - GET
+      - POST
+  api209:
+    host: '*'
+    paths: /api/httpconnectorendpoints
+    methods:
+      - GET
+      - POST
+  api210:
+    host: '*'
+    paths: /api/ediprofiles
+    methods:
+      - GET
+      - POST
+  api211:
+    host: '*'
+    paths: '/api/sshares/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api213:
+    host: '*'
+    paths: '/api/revisions/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api214:
+    host: '*'
+    paths: '/api/httpconnectorresources/:_httpConnectorId'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api215:
+    host: '*'
+    paths: '/api/httpconnectorendpoints/:_httpConnectorEndpointId'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api216:
+    host: '*'
+    paths: '/api/ediprofiles/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api217:
+    host: '*'
+    paths: '/api/jobs/:_id/diagnostics'
+    methods:
+      - GET
+  api218:
+    host: '*'
+    paths: /api/sampleIntegrations/install
+    methods:
+      - POST
+  api220:
+    host: '*'
+    paths: /api/fetchMatchingConnectors
+    methods:
+      - GET
+  api221:
+    host: '*'
+    paths: /api/apim/redirect
+    methods:
+      - GET
+  api222:
+    host: '*'
+    paths: '/api/apim/:apiId/:modelPlural/:_id/view'
+    methods:
+      - GET
+  api223:
+    host: '*'
+    paths: /api/apim/apis
+    methods:
+      - GET
+  api224:
+    host: '*'
+    paths: '/api/apim/:modelPlural/:_id/manageAPI'
+    methods:
+      - POST
+      - PUT
+  api225:
+    host: '*'
+    paths: '/api/apim/:apiId/:modelPlural/:_id/openAPIspec'
+    methods:
+      - POST
+  api230:
+    host: '*'
+    paths: '/connections/:_id/distributed'
+    methods:
+      - GET
+  api231:
+    host: '*'
+    paths: '/exports/:_id/distributed'
+    methods:
+      - GET
+      - PUT
+  api232:
+    host: '*'
+    paths: '/imports/:_id/distributed'
+    methods:
+      - GET
+      - PUT
+  api233:
+    host: '*'
+    paths: /api/usage
+    methods:
+      - GET
+  api235:
+    host: '*'
+    paths: '/api/aiDescription/:modelPlural/:_id'
+    methods:
+      - PUT
+  api236:
+    host: '*'
+    paths: /api/discovery
+    methods:
+      - GET
+  api237:
+    host: '*'
+    paths: '/api/templates/:_templateId/:modelPlural/:_id/clone'
+    methods:
+      - POST
+  api238:
+    host: '*'
+    paths: '/api/templates/:_templateId/:modelPlural/:_id'
+    methods:
+      - GET
+  api239:
+    host: '*'
+    paths: /api/apim/setup
+    methods:
+      - POST
+      - PUT
+  api240:
+    host: '*'
+    paths: /api/apim/validate
+    methods:
+      - PUT
+  api241:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/iLMIgnore'
+    methods:
+      - GET
+  api245:
+    host: '*'
+    paths: /api/applications
+    methods:
+      - GET
+  api246:
+    host: '*'
+    paths: /api/tpconnectors
+    methods:
+      - GET
+      - POST
+  api247:
+    host: '*'
+    paths: '/api/tpconnectors/:_tpconnectorId'
+    methods:
+      - GET
+      - PUT
+      - DELETE
+  api248:
+    host: '*'
+    paths: '/api/:modelPlural/:_id/recurse'
+    methods:
+      - DELETE
+  api255:
+    host: '*'
+    paths: '/api/lookupcaches/:_lookupCacheId/getData'
+    methods:
+      - POST
+  api256:
+    host: '*'
+    paths: '/api/lookupcaches/:_lookupCacheId/data'
+    methods:
+      - POST
+      - DELETE
+  api257:
+    host: '*'
+    paths: '/api/lookupcaches/:_lookupCacheId/data/purge'
+    methods:
+      - DELETE
+  api258:
+    host: '*'
+    paths: /api/ediTransactions/savedFilters
+    methods:
+      - POST
+      - GET
+  api259:
+    host: '*'
+    paths: '/api/ediTransactions/savedFilters/:_id'
+    methods:
+      - PUT
+      - GET
+      - DELETE
+  api260:
+    host: '*'
+    paths: /api/published/featuredTemplates
+    methods:
+      - GET
+  api261:
+    host: '*'
+    paths: '/api/:modelPlural/search'
+    methods:
+      - GET
+  api262:
+    host: '*'
+    paths: /api/environments
+    methods:
+      - GET
+      - POST
+  api263:
+    host: '*'
+    paths: '/api/environments/:_id'
+    methods:
+      - GET
+      - PUT
+  api264:
+    host: '*'
+    paths: '/api/environments/:_environmentId/enable'
+    methods:
+      - PUT
+  api265:
+    host: '*'
+    paths: /api/apim/settings
+    methods:
+      - GET
+  api266:
+    host: '*'
+    paths: /api/apim/hrid/validate
+    methods:
+      - PUT
+  api267:
+    host: '*'
+    paths: /api/resumeAPIM
+    methods:
+      - PUT
+  api274:
+    host: '*'
+    paths: '/api/:modelPlural/:_id/descendants'
+    methods:
+      - GET
+  api275:
+    host: '*'
+    paths: /api/apis/preview/helper
+    methods:
+      - PUT
+  api276:
+    host: '*'
+    paths: /api/apis/schema
+    methods:
+      - PUT
+  api277:
+    host: '*'
+    paths: /api/supportshares
+    methods:
+      - POST
+      - DELETE
+      - GET
+  api278:
+    host: '*'
+    paths: /api/shared/supportshares
+    methods:
+      - GET
+  api280:
+    host: '*'
+    paths: '/api/accessScope/:modelPlural/:_modelId'
+    methods:
+      - GET
+  api284:
+    host: '*'
+    paths: /api/requestAShare
+    methods:
+      - POST
+  api285:
+    host: '*'
+    paths: /api/requestAShares
+    methods:
+      - GET
+  api286:
+    host: '*'
+    paths: '/api/requestAShares/:_requestId/:action'
+    methods:
+      - POST
+  api287:
+    host: '*'
+    paths: /api/historicalMonthlyUsage
+    methods:
+      - GET
+  api289:
+    host: '*'
+    paths: /api/approvals/payloadStorage
+    methods:
+      - POST
+  api290:
+    host: '*'
+    paths: /api/apis/usage/summary
+    methods:
+      - GET
+  api291:
+    host: '*'
+    paths: /api/apim/redirect/analytics
+    methods:
+      - GET
+  api292:
+    host: '*'
+    paths: /api/apis/usage
+    methods:
+      - GET
+  api293:
+    host: '*'
+    paths: /api/apis/usage/environments
+    methods:
+      - GET
+  api294:
+    host: '*'
+    paths: /api/mcpservers
+    methods:
+      - GET
+      - POST
+  api295:
+    host: '*'
+    paths: '/api/mcpservers/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  tool-api-list:
+    host: '*'
+    paths: /api/tools
+    methods:
+      - GET
+      - POST
+  tool-api-crud:
+    host: '*'
+    paths: '/api/tools/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  tool-api-integration-list:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/tools'
+    methods:
+      - GET
+  tool-api-replace-connection:
+    host: '*'
+    paths: '/api/tools/:_toolId/replaceConnection'
+    methods:
+      - PUT
+  tool-api-connections:
+    host: '*'
+    paths: '/api/tools/:_toolId/connections'
+    methods:
+      - GET
+  tool-api-preview-helper:
+    host: '*'
+    paths: /api/tools/preview/helper
+    methods:
+      - PUT
+  resource-management-api1:
+    host: '*'
+    paths: /v1/apis
+    methods:
+      - GET
+      - POST
+  resource-management-api2:
+    host: '*'
+    paths: /v1/accesstokens
+    methods:
+      - GET
+      - POST
+  resource-management-api3:
+    host: '*'
+    paths: /v1/clients
+    methods:
+      - GET
+      - POST
+  resource-management-api4:
+    host: '*'
+    paths: /v1/connectors
+    methods:
+      - GET
+      - POST
+  resource-management-api5:
+    host: '*'
+    paths: /v1/templates
+    methods:
+      - GET
+      - POST
+  resource-management-api6:
+    host: '*'
+    paths: /v1/iclients
+    methods:
+      - GET
+      - POST
+  resource-management-api7:
+    host: '*'
+    paths: /v1/imports
+    methods:
+      - GET
+      - POST
+  resource-management-api8:
+    host: '*'
+    paths: /v1/exports
+    methods:
+      - GET
+      - POST
+  resource-management-api9:
+    host: '*'
+    paths: /v1/flows
+    methods:
+      - GET
+      - POST
+  resource-management-api10:
+    host: '*'
+    paths: /v1/integrations
+    methods:
+      - GET
+      - POST
+  resource-management-api11:
+    host: '*'
+    paths: /v1/connections
+    methods:
+      - GET
+      - POST
+  resource-management-api12:
+    host: '*'
+    paths: /v1/stacks
+    methods:
+      - GET
+      - POST
+  resource-management-api13:
+    host: '*'
+    paths: /v1/scripts
+    methods:
+      - GET
+      - POST
+  resource-management-api14:
+    host: '*'
+    paths: /v1/asynchelpers
+    methods:
+      - GET
+      - POST
+  resource-management-api15:
+    host: '*'
+    paths: /v1/filedefinitions
+    methods:
+      - GET
+      - POST
+  resource-management-api16:
+    host: '*'
+    paths: /v1/jobs
+    methods:
+      - POST
+  resource-management-api17:
+    host: '*'
+    paths: /v1/ssoclients
+    methods:
+      - GET
+      - POST
+  resource-management-api18:
+    host: '*'
+    paths: /v1/tags
+    methods:
+      - GET
+      - POST
+  resource-management-api19:
+    host: '*'
+    paths: '/v1/apis/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api20:
+    host: '*'
+    paths: '/v1/accesstokens/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api21:
+    host: '*'
+    paths: '/v1/clients/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api22:
+    host: '*'
+    paths: '/v1/connectors/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api23:
+    host: '*'
+    paths: '/v1/templates/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api24:
+    host: '*'
+    paths: '/v1/iclients/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api25:
+    host: '*'
+    paths: '/v1/imports/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api26:
+    host: '*'
+    paths: '/v1/exports/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api27:
+    host: '*'
+    paths: '/v1/flows/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api28:
+    host: '*'
+    paths: '/v1/integrations/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api29:
+    host: '*'
+    paths: '/v1/connections/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api30:
+    host: '*'
+    paths: '/v1/stacks/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api31:
+    host: '*'
+    paths: '/v1/scripts/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api32:
+    host: '*'
+    paths: '/v1/asynchelpers/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api33:
+    host: '*'
+    paths: '/v1/filedefinitions/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api34:
+    host: '*'
+    paths: '/v1/jobs/:_id'
+    methods:
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api35:
+    host: '*'
+    paths: '/v1/ssoclients/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api36:
+    host: '*'
+    paths: '/v1/tags/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api37:
+    host: '*'
+    paths: '/v1/flows/:_flowId/descendants'
+    methods:
+      - GET
+  resource-management-api38:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/dependencies'
+    methods:
+      - GET
+  resource-management-api39:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/flows'
+    methods:
+      - GET
+  resource-management-api40:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/exports'
+    methods:
+      - GET
+  resource-management-api41:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/imports'
+    methods:
+      - GET
+  resource-management-api42:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/connections'
+    methods:
+      - GET
+  resource-management-api43:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/asynchelpers'
+    methods:
+      - GET
+  resource-management-api44:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/filedefinitions'
+    methods:
+      - GET
+  resource-management-api45:
+    host: '*'
+    paths: '/v1/stacks/:_id/invite'
+    methods:
+      - POST
+  resource-management-api46:
+    host: '*'
+    paths: '/v1/sshares/:_id/reinvite'
+    methods:
+      - PUT
+  resource-management-api47:
+    host: '*'
+    paths: /v1/sshares
+    methods:
+      - GET
+      - POST
+  resource-management-api48:
+    host: '*'
+    paths: /v1/shared/sshares
+    methods:
+      - GET
+  resource-management-api49:
+    host: '*'
+    paths: '/v1/sshares/:_id/accept'
+    methods:
+      - PUT
+  resource-management-api50:
+    host: '*'
+    paths: '/v1/sshares/:_id/dismiss'
+    methods:
+      - PUT
+  resource-management-api51:
+    host: '*'
+    paths: /v1/shared/stacks
+    methods:
+      - GET
+  resource-management-api52:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/connections'
+    methods:
+      - POST
+  resource-management-api53:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/connections/:_connectionId/register'
+    methods:
+      - PUT
+      - DELETE
+  resource-management-api54:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/connections/register'
+    methods:
+      - PUT
+  resource-management-api228:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/lookupcaches/:_lookupCacheId/register'
+    methods:
+      - DELETE
+      - PUT
+  resource-management-api55:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/tree/metadata'
+    methods:
+      - GET
+  resource-management-api56:
+    host: '*'
+    paths: '/v1/stacks/:_id/systemToken'
+    methods:
+      - GET
+      - DELETE
+  resource-management-api57:
+    host: '*'
+    paths: '/v1/connectors/:_connectorId/licenses'
+    methods:
+      - GET
+      - POST
+  resource-management-api58:
+    host: '*'
+    paths: '/v1/connectors/:_connectorId/licenses/:_licenseId'
+    methods:
+      - GET
+      - PUT
+      - DELETE
+  resource-management-api59:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/ashares'
+    methods:
+      - GET
+  resource-management-api60:
+    host: '*'
+    paths: /v1/invite
+    methods:
+      - POST
+  resource-management-api61:
+    host: '*'
+    paths: /v1/ashares
+    methods:
+      - GET
+      - POST
+  resource-management-api62:
+    host: '*'
+    paths: /v1/shared/ashares
+    methods:
+      - GET
+  resource-management-api63:
+    host: '*'
+    paths: '/v1/shared/ashares/:_id'
+    methods:
+      - DELETE
+  resource-management-api64:
+    host: '*'
+    paths: '/v1/ashares/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api65:
+    host: '*'
+    paths: '/v1/ashares/:_id/disable'
+    methods:
+      - PUT
+  resource-management-api66:
+    host: '*'
+    paths: '/v1/ashares/:_id/reinvite'
+    methods:
+      - PUT
+  resource-management-api67:
+    host: '*'
+    paths: '/v1/ashares/:_id/accept'
+    methods:
+      - PUT
+  resource-management-api68:
+    host: '*'
+    paths: '/v1/ashares/:_id/dismiss'
+    methods:
+      - PUT
+  resource-management-api69:
+    host: '*'
+    paths: '/v1/sshares/:_id/disable'
+    methods:
+      - PUT
+  resource-management-api70:
+    host: '*'
+    paths: '/v1/flows/:_flowId/replaceConnection'
+    methods:
+      - PUT
+  resource-management-api71:
+    host: '*'
+    paths: '/v1/exports/:_exportId/replaceConnection'
+    methods:
+      - PUT
+  resource-management-api72:
+    host: '*'
+    paths: '/v1/imports/:_importId/replaceConnection'
+    methods:
+      - PUT
+  resource-management-api73:
+    host: '*'
+    paths: '/v1/accesstokens/:_tokenId/display'
+    methods:
+      - GET
+  resource-management-api74:
+    host: '*'
+    paths: '/v1/accesstokens/:_tokenId/generate'
+    methods:
+      - POST
+  resource-management-api75:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/revisions/create'
+    methods:
+      - POST
+  resource-management-api76:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/revisions/:_revisionId'
+    methods:
+      - GET
+  resource-management-api77:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/revisions/:_revisionId/diff'
+    methods:
+      - GET
+  resource-management-api78:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/revisions/:_revisionId/errors'
+    methods:
+      - GET
+  resource-management-api79:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/revisions'
+    methods:
+      - GET
+  resource-management-api86:
+    host: '*'
+    paths: /v1/invite/multiple
+    methods:
+      - POST
+  resource-management-api87:
+    host: '*'
+    paths: /v1/test/publish/permissions
+    methods:
+      - PUT
+  resource-management-api88:
+    host: '*'
+    paths: /v1/s3SignedURL
+    methods:
+      - GET
+  resource-management-api89:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/changeEdition'
+    methods:
+      - POST
+  resource-management-api90:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/initChild'
+    methods:
+      - POST
+  resource-management-api91:
+    host: '*'
+    paths: >-
+      /v1/integrations/:_integrationId/flowGroupings/:_flowGroupingId/settingsForm/init
+    methods:
+      - POST
+  resource-management-api92:
+    host: '*'
+    paths: '/v1/integrations/:_id/:functionType/:function'
+    methods:
+      - PUT
+  resource-management-api93:
+    host: '*'
+    paths: '/v1/integrations/:_id/preUninstall'
+    methods:
+      - PUT
+  resource-management-api94:
+    host: '*'
+    paths: '/v1/integrations/:_connectorId/install'
+    methods:
+      - POST
+  resource-management-api95:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/settingsForm/init'
+    methods:
+      - POST
+  resource-management-api96:
+    host: '*'
+    paths: '/v1/connectors/:_id/update'
+    methods:
+      - PUT
+  resource-management-api97:
+    host: '*'
+    paths: '/v1/connectors/:_id/installBase'
+    methods:
+      - GET
+  resource-management-api98:
+    host: '*'
+    paths: /v1/published
+    methods:
+      - GET
+  resource-management-api99:
+    host: '*'
+    paths: /v1/templates/published
+    methods:
+      - GET
+  resource-management-api100:
+    host: '*'
+    paths: '/v1/templates/:_templateId/upload/signedURL'
+    methods:
+      - GET
+  resource-management-api101:
+    host: '*'
+    paths: '/v1/templates/:_templateId/download/signedURL'
+    methods:
+      - GET
+  resource-management-api102:
+    host: '*'
+    paths: /v1/published/combined
+    methods:
+      - POST
+  resource-management-api103:
+    host: '*'
+    paths: /v1/frequentlyInstalledApps
+    methods:
+      - GET
+  resource-management-api104:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/template'
+    methods:
+      - GET
+  resource-management-api105:
+    host: '*'
+    paths: '/v1/flows/:_id/template'
+    methods:
+      - GET
+  resource-management-api106:
+    host: '*'
+    paths: '/v1/integrations/template/:_templateId'
+    methods:
+      - POST
+  resource-management-api107:
+    host: '*'
+    paths: /v1/integrations/template
+    methods:
+      - POST
+  resource-management-api108:
+    host: '*'
+    paths: '/v1/templates/:_templateId/upload'
+    methods:
+      - POST
+  resource-management-api109:
+    host: '*'
+    paths: /v1/integrations/template/preview
+    methods:
+      - GET
+  resource-management-api110:
+    host: '*'
+    paths: '/v1/integrations/:_id/detachLicense'
+    methods:
+      - PUT
+  resource-management-api111:
+    host: '*'
+    paths: '/v1/templates/:_templateId/preview'
+    methods:
+      - GET
+  resource-management-api112:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/clonefamily'
+    methods:
+      - GET
+  resource-management-api113:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/pull/:_cloneIntegrationId/compare'
+    methods:
+      - POST
+  resource-management-api114:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/pull/:_cloneIntegrationId/open'
+    methods:
+      - POST
+  resource-management-api115:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/revisions/:_revisionId/cancel'
+    methods:
+      - POST
+  resource-management-api116:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/revisions/:_revisionId/installSteps'
+    methods:
+      - POST
+  resource-management-api117:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/revisions/cancel'
+    methods:
+      - POST
+  resource-management-api118:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/revisions/:_revisionId/revert/compare'
+    methods:
+      - POST
+  resource-management-api119:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/revisions/:_revisionId/revert/open'
+    methods:
+      - POST
+  resource-management-api120:
+    host: '*'
+    paths: '/v1/connectors/:_connectorId/install'
+    methods:
+      - POST
+  resource-management-api121:
+    host: '*'
+    paths: '/v1/connectors/:_connectorId/preview'
+    methods:
+      - GET
+  resource-management-api122:
+    host: '*'
+    paths: '/v1/integrations/:_id/install'
+    methods:
+      - DELETE
+  resource-management-api123:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/clone/preview'
+    methods:
+      - GET
+  resource-management-api124:
+    host: '*'
+    paths:
+      - '/v1/:modelPlural/:_id/clone'
+      - '/v1/apis/:_id/clone/validate'
+    methods:
+      - POST
+  resource-management-api125:
+    host: '*'
+    paths: /v1/transfers
+    methods:
+      - GET
+  resource-management-api126:
+    host: '*'
+    paths: /v1/transfers/preview
+    methods:
+      - GET
+  resource-management-api127:
+    host: '*'
+    paths: /v1/transfers/invite
+    methods:
+      - POST
+  resource-management-api128:
+    host: '*'
+    paths: '/v1/transfers/:_id/accept'
+    methods:
+      - PUT
+  resource-management-api129:
+    host: '*'
+    paths: '/v1/transfers/:_id/dismiss'
+    methods:
+      - PUT
+  resource-management-api130:
+    host: '*'
+    paths: '/v1/transfers/:_id/cancel'
+    methods:
+      - PUT
+  resource-management-api131:
+    host: '*'
+    paths: '/v1/transfers/:_id'
+    methods:
+      - DELETE
+  resource-management-api132:
+    host: '*'
+    paths: /v1/transfers/invited
+    methods:
+      - GET
+  resource-management-api139:
+    host: '*'
+    paths: /v1/flows/updateFlowGrouping
+    methods:
+      - PUT
+  resource-management-api140:
+    host: '*'
+    paths: '/v1/connections/:_connectionId/tradingPartner'
+    methods:
+      - GET
+      - PUT
+  resource-management-api141:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/resume'
+    methods:
+      - PUT
+  resource-management-api142:
+    host: '*'
+    paths: /v1/resume
+    methods:
+      - PUT
+  resource-management-api143:
+    host: '*'
+    paths: /v1/licenses
+    methods:
+      - GET
+  resource-management-api144:
+    host: '*'
+    paths: /v1/licenses/startTrial
+    methods:
+      - POST
+  resource-management-api145:
+    host: '*'
+    paths: /v1/licenseEntitlementUsage
+    methods:
+      - GET
+  resource-management-api146:
+    host: '*'
+    paths: /v1/recycleBinTTL
+    methods:
+      - GET
+  resource-management-api147:
+    host: '*'
+    paths: '/v1/recycleBinTTL/:modelPlural'
+    methods:
+      - GET
+  resource-management-api148:
+    host: '*'
+    paths: '/v1/recycleBinTTL/:modelPlural/:_id'
+    methods:
+      - GET
+      - POST
+      - DELETE
+  resource-management-api149:
+    host: '*'
+    paths: '/v1/recycleBinTTL/:modelPlural/:_id/doCascadeRestore'
+    methods:
+      - POST
+  resource-management-api150:
+    host: '*'
+    paths: /v1/tiles
+    methods:
+      - GET
+  resource-management-api151:
+    host: '*'
+    paths: '/v1/tiles/:_integrationId'
+    methods:
+      - GET
+  resource-management-api156:
+    host: '*'
+    paths: /v1/httpconnectors
+    methods:
+      - GET
+      - POST
+  resource-management-api157:
+    host: '*'
+    paths: '/v1/httpconnectors/:_httpConnectorId'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api158:
+    host: '*'
+    paths: '/v1/httpconnectors/:_httpConnectorId/httpconnectorresources'
+    methods:
+      - GET
+  resource-management-api159:
+    host: '*'
+    paths: '/v1/httpconnectors/:_httpConnectorId/:_httpConnectorResourceId'
+    methods:
+      - GET
+  resource-management-api160:
+    host: '*'
+    paths: >-
+      /v1/httpconnectors/:_httpConnectorId/:_httpConnectorResourceId/httpconnectorendpoints
+    methods:
+      - GET
+  resource-management-api161:
+    host: '*'
+    paths: >-
+      /v1/httpconnectors/:_httpConnectorId/:_httpConnectorResourceId/:_httpConnectorEndpointId
+    methods:
+      - GET
+  resource-management-api162:
+    host: '*'
+    paths: /v1/revisions
+    methods:
+      - GET
+      - POST
+  resource-management-api163:
+    host: '*'
+    paths: /v1/httpconnectorresources
+    methods:
+      - GET
+      - POST
+  resource-management-api164:
+    host: '*'
+    paths: /v1/httpconnectorendpoints
+    methods:
+      - GET
+      - POST
+  resource-management-api165:
+    host: '*'
+    paths: /v1/ediprofiles
+    methods:
+      - GET
+      - POST
+  resource-management-api166:
+    host: '*'
+    paths: '/v1/sshares/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api168:
+    host: '*'
+    paths: '/v1/revisions/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api169:
+    host: '*'
+    paths: '/v1/httpconnectorresources/:_httpConnectorId'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api170:
+    host: '*'
+    paths: '/v1/httpconnectorendpoints/:_httpConnectorEndpointId'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api171:
+    host: '*'
+    paths: '/v1/ediprofiles/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api172:
+    host: '*'
+    paths: '/v1/jobs/:_id/diagnostics'
+    methods:
+      - GET
+  resource-management-api173:
+    host: '*'
+    paths: /v1/sampleIntegrations/install
+    methods:
+      - POST
+  resource-management-api174:
+    host: '*'
+    paths: /v1/fetchMatchingConnectors
+    methods:
+      - GET
+  resource-management-api175:
+    host: '*'
+    paths: '/v1/state/:key'
+    methods:
+      - PUT
+  resource-management-api176:
+    host: '*'
+    paths: /v1/state
+    methods:
+      - GET
+  resource-management-api177:
+    host: '*'
+    paths: '/v1/state/:key'
+    methods:
+      - GET
+  resource-management-api178:
+    host: '*'
+    paths: '/v1/state/:key'
+    methods:
+      - DELETE
+  resource-management-api179:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/state/:key'
+    methods:
+      - PUT
+  resource-management-api180:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/state/:key'
+    methods:
+      - GET
+  resource-management-api181:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/state'
+    methods:
+      - GET
+  resource-management-api182:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/state/:key'
+    methods:
+      - DELETE
+  resource-management-api183:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/state'
+    methods:
+      - DELETE
+  resource-management-api184:
+    host: '*'
+    paths: /v1/state
+    methods:
+      - DELETE
+  resource-management-api186:
+    host: '*'
+    paths:
+      - '/v1/connections/:_id/distributed'
+      - '/v1/exports/:_id/distributed'
+      - '/v1/imports/:_id/distributed'
+      - /v1/usage
+    methods:
+      - GET
+  resource-management-api187:
+    host: '*'
+    paths:
+      - '/v1/imports/:_id/distributed'
+      - '/v1/exports/:_id/distributed'
+    methods:
+      - PUT
+  resource-management-api188:
+    host: '*'
+    paths:
+      - /netsuite/v1/licenseCheck
+    methods:
+      - POST
+  resource-management-api189:
+    host: '*'
+    paths: /v1/mirror
+    methods:
+      - POST
+  resource-management-api191:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/iLMIgnore'
+    methods:
+      - GET
+  resource-management-api196:
+    host: '*'
+    paths: /v1/applications
+    methods:
+      - GET
+  resource-management-api197:
+    host: '*'
+    paths: /v1/tpconnectors
+    methods:
+      - GET
+      - POST
+  resource-management-api198:
+    host: '*'
+    paths: '/v1/tpconnectors/:_tpconnectorId'
+    methods:
+      - GET
+      - PUT
+      - DELETE
+  resource-management-api199:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/recurse'
+    methods:
+      - DELETE
+  resource-management-sync-dataset-1:
+    host: '*'
+    paths:
+      - '/api/syncs/:_id'
+      - /api/syncs
+      - '/api/integrations/:_integrationId/syncs'
+      - '/api/syncs/:_syncId/datasets/:_id'
+      - '/api/syncs/:_syncId/datasets'
+    methods:
+      - GET
+  resource-management-sync-dataset-2:
+    host: '*'
+    paths:
+      - '/api/syncs/:_id'
+      - '/api/syncs/:_syncId/datasets'
+    methods:
+      - PUT
+  resource-management-sync-dataset-3:
+    host: '*'
+    paths:
+      - /api/syncs
+    methods:
+      - POST
+  resource-management-sync-dataset-4:
+    host: '*'
+    paths:
+      - '/api/syncs/:_id'
+    methods:
+      - DELETE
+  resource-management-sync-dataset-5:
+    host: '*'
+    paths:
+      - '/v1/syncs/:_id'
+      - /v1/syncs
+      - '/v1/integrations/:_integrationId/syncs'
+      - '/v1/syncs/:_syncId/datasets/:_id'
+      - '/v1/syncs/:_syncId/datasets'
+    methods:
+      - GET
+  resource-management-sync-dataset-6:
+    host: '*'
+    paths:
+      - '/v1/syncs/:_id'
+      - '/v1/syncs/:_syncId/datasets'
+    methods:
+      - PUT
+  resource-management-sync-dataset-7:
+    host: '*'
+    paths:
+      - /v1/syncs
+    methods:
+      - POST
+  resource-management-sync-dataset-8:
+    host: '*'
+    paths:
+      - '/v1/syncs/:_id'
+    methods:
+      - DELETE
+  resource-management-api200:
+    host: '*'
+    paths: /v1/lookupcaches
+    methods:
+      - GET
+      - POST
+  resource-management-api201:
+    host: '*'
+    paths: '/v1/lookupcaches/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api202:
+    host: '*'
+    paths: '/v1/lookupcaches/:_lookupCacheId/getData'
+    methods:
+      - POST
+  resource-management-api203:
+    host: '*'
+    paths: '/v1/lookupcaches/:_lookupCacheId/data'
+    methods:
+      - POST
+      - DELETE
+  resource-management-api204:
+    host: '*'
+    paths: '/v1/lookupcaches/:_lookupCacheId/data/purge'
+    methods:
+      - DELETE
+  resource-management-api205:
+    host: '*'
+    paths: /v1/published/featuredTemplates
+    methods:
+      - GET
+  resource-management-api210:
+    host: '*'
+    paths: '/v1/:modelPlural/:_id/descendants'
+    methods:
+      - GET
+  resource-management-api211:
+    host: '*'
+    paths: /v1/apis/schema
+    methods:
+      - PUT
+  resource-management-public-api1:
+    host: '*'
+    paths: /publishedHttpConnectors
+    methods:
+      - GET
+  resource-management-public-api2:
+    host: '*'
+    paths: /app/shopify/verify
+    methods:
+      - GET
+  resource-management-api206:
+    host: '*'
+    paths: /v1/environments
+    methods:
+      - GET
+      - POST
+  resource-management-api207:
+    host: '*'
+    paths: '/v1/environments/:_id'
+    methods:
+      - GET
+      - PUT
+  resource-management-api208:
+    host: '*'
+    paths: '/v1/environments/:_environmentId/enable'
+    methods:
+      - PUT
+  resource-management-api209:
+    host: '*'
+    paths: /v1/resumeAPIM
+    methods:
+      - PUT
+  resource-management-api212:
+    host: '*'
+    paths: '/v1/accessScope/:modelPlural/:_modelId'
+    methods:
+      - GET
+  resource-management-api213:
+    host: '*'
+    paths: /v1/historicalMonthlyUsage
+    methods:
+      - GET
+  resource-management-api214:
+    host: '*'
+    paths: /v1/apis/usage/summary
+    methods:
+      - GET
+  resource-management-api215:
+    host: '*'
+    paths: /v1/apis/usage
+    methods:
+      - GET
+  resource-management-tool-api-list:
+    host: '*'
+    paths: /v1/tools
+    methods:
+      - GET
+      - POST
+  resource-management-tool-api-crud:
+    host: '*'
+    paths: '/v1/tools/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-tool-api-integration-list:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/tools'
+    methods:
+      - GET
+  resource-management-api-integration-list:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/apis'
+    methods:
+      - GET
+  resource-management-tool-api-replace-connection:
+    host: '*'
+    paths: '/v1/tools/:_toolId/replaceConnection'
+    methods:
+      - PUT
+  resource-management-tool-api-connections:
+    host: '*'
+    paths: '/v1/tools/:_toolId/connections'
+    methods:
+      - GET
+  resource-management-mcpserver-api1:
+    host: '*'
+    paths: /v1/mcpservers
+    methods:
+      - GET
+      - POST
+  resource-management-mcpserver-api2:
+    host: '*'
+    paths: '/v1/mcpservers/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-mcpoauthprovider-api1:
+    host: '*'
+    paths: /v1/mcpoauthproviders
+    methods:
+      - GET
+      - POST
+  resource-management-mcpoauthprovider-api2:
+    host: '*'
+    paths: '/v1/mcpoauthproviders/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-api216:
+    host: '*'
+    paths: /v1/apis/usage/environments
+    methods:
+      - GET
+  resource-management-api218:
+    host: '*'
+    paths: '/v1/apis/:_id/template'
+    methods:
+      - GET
+  resource-management-api219:
+    host: '*'
+    paths: /v1/apis/updateApiGrouping
+    methods:
+      - PUT
+  resource-management-api220:
+    host: '*'
+    paths: /v1/syncs/usage/environments
+    methods:
+      - GET
+  resource-management-api221:
+    host: '*'
+    paths: /v1/syncs/usage
+    methods:
+      - GET
+  resource-management-api222:
+    host: '*'
+    paths: /v1/syncs/usage/summary
+    methods:
+      - GET
+  resource-management-api229:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/lookupcaches/register'
+    methods:
+      - PUT
+  resource-management-api230:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/lookupcaches'
+    methods:
+      - POST
+  resource-management-api231:
+    host: '*'
+    paths: '/v1/integrations/:_integrationId/lookupcaches'
+    methods:
+      - GET
+  resource-management-api232:
+    host: '*'
+    paths: '/v1/tools/:_id/template'
+    methods:
+      - GET
+  resource-management-api233:
+    host: '*'
+    paths: /v1/ashares/bulk
+    methods:
+      - PUT
+  resource-management-api237:
+    host: '*'
+    paths: '/v1/ediTransactions/:_transactionId/mdn'
+    methods:
+      - GET
+  resource-management-mcp-enduser-api-get:
+    host: '*'
+    paths:
+      - '/v1/mcpservers/:_id/effective-access'
+      - '/v1/endusers/:_ashareId/effective-access'
+      - /v1/endusers/migrate/preview
+      - /v1/endusers
+      - /v1/groups
+      - /v1/roles
+      - /v1/idpconfigs
+    methods:
+      - GET
+  resource-management-mcp-enduser-api-post:
+    host: '*'
+    paths:
+      - '/v1/groups/:_groupId/members/remove'
+      - '/v1/groups/:_groupId/members'
+      - /v1/endusers/invite
+      - /v1/endusers/invite/bulk
+      - /v1/endusers/migrate
+      - /v1/groups
+      - /v1/roles
+      - /v1/idpconfigs
+    methods:
+      - POST
+  resource-management-mcp-enduser-api-resource-by-id:
+    host: '*'
+    paths:
+      - '/v1/groups/:_id'
+      - '/v1/roles/:_id'
+      - '/v1/idpconfigs/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  resource-management-mcp-enduser-api-delete:
+    host: '*'
+    paths: '/v1/endusers/:_ashareId'
+    methods:
+      - DELETE
+  resource-management-mcp-enduser-mcpserver-assign:
+    host: '*'
+    paths: '/v1/mcpservers/:_id/endusers'
+    methods:
+      - PUT
+  resource-management-mcp-server-groups-bulk-assign:
+    host: '*'
+    paths: '/v1/mcpservers/:_id/groups'
+    methods:
+      - PUT
+      - POST
+  api296:
+    host: '*'
+    paths: /api/sandboxmigration/status
+    methods:
+      - GET
+  api297:
+    host: '*'
+    paths: /api/sandboxmigration/start
+    methods:
+      - POST
+  api298:
+    host: '*'
+    paths: /api/sandboxmigration/flows/enable
+    methods:
+      - PUT
+  api299:
+    host: '*'
+    paths: /api/sandboxmigration/preview
+    methods:
+      - GET
+  api300:
+    host: '*'
+    paths: /api/sandboxmigration/done
+    methods:
+      - PUT
+  api301:
+    host: '*'
+    paths: /api/aiagents/summary/monthly
+    methods:
+      - GET
+  api302:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/apis'
+    methods:
+      - GET
+  api303:
+    host: '*'
+    paths: '/api/apis/:_id/template'
+    methods:
+      - GET
+  api304:
+    host: '*'
+    paths: /api/apis/updateApiGrouping
+    methods:
+      - PUT
+  api305:
+    host: '*'
+    paths: /api/syncs/usage/environments
+    methods:
+      - GET
+  api306:
+    host: '*'
+    paths: /api/syncs/usage
+    methods:
+      - GET
+  api307:
+    host: '*'
+    paths: /api/syncs/usage/summary
+    methods:
+      - GET
+  api311:
+    host: '*'
+    paths: '/api/connectors/:_connectorId/iaLicenseInstalls'
+    methods:
+      - GET
+  api312:
+    host: '*'
+    paths: '/api/connectors/:_connectorId/iaLicenseInstalls/:_iaLicenseInstallId'
+    methods:
+      - GET
+  api313:
+    host: '*'
+    paths: /api/aiagents/credits
+    methods:
+      - GET
+  api314:
+    host: '*'
+    paths: /api/aiactions/summary/monthly
+    methods:
+      - GET
+  api315:
+    host: '*'
+    paths: /api/aiagents/actions
+    methods:
+      - GET
+  api317:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/lookupcaches/register'
+    methods:
+      - PUT
+  api318:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/lookupcaches'
+    methods:
+      - POST
+  api319:
+    host: '*'
+    paths: '/api/integrations/:_integrationId/lookupcaches'
+    methods:
+      - GET
+  api320:
+    host: '*'
+    paths: '/api/aiagents/:_agentId/conversations'
+    methods:
+      - GET
+  api321:
+    host: '*'
+    paths: '/api/aiagents/:_agentId/conversations/:_conversationId'
+    methods:
+      - GET
+  api322:
+    host: '*'
+    paths: '/api/aiagents/:_agentId/conversations'
+    methods:
+      - POST
+  api323:
+    host: '*'
+    paths: '/api/aiagents/:_agentId/conversations/:_conversationId'
+    methods:
+      - PATCH
+  api324:
+    host: '*'
+    paths: '/api/aiagents/:_agentId/conversations/:_conversationId'
+    methods:
+      - DELETE
+  api325:
+    host: '*'
+    paths: '/api/aiagents/:_agentId/conversations'
+    methods:
+      - DELETE
+  api326:
+    host: '*'
+    paths: '/api/tools/:_id/template'
+    methods:
+      - GET
+  api329:
+    host: '*'
+    paths: /api/mcpoauthproviders
+    methods:
+      - GET
+      - POST
+  api330:
+    host: '*'
+    paths: '/api/mcpoauthproviders/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  api331:
+    host: '*'
+    paths: /api/ashares/bulk
+    methods:
+      - PUT
+  mcp-enduser-api-get:
+    host: '*'
+    paths:
+      - '/api/mcpservers/:_id/effective-access'
+      - '/api/endusers/:_ashareId/effective-access'
+      - /api/endusers/migrate/preview
+      - /api/endusers
+      - /api/groups
+      - /api/roles
+      - /api/idpconfigs
+    methods:
+      - GET
+  mcp-enduser-api-post:
+    host: '*'
+    paths:
+      - '/api/groups/:_groupId/members/remove'
+      - '/api/groups/:_groupId/members'
+      - /api/endusers/invite
+      - /api/endusers/invite/bulk
+      - /api/endusers/migrate
+      - /api/groups
+      - /api/roles
+      - /api/idpconfigs
+    methods:
+      - POST
+  mcp-enduser-api-resource-by-id:
+    host: '*'
+    paths:
+      - '/api/groups/:_id'
+      - '/api/roles/:_id'
+      - '/api/idpconfigs/:_id'
+    methods:
+      - GET
+      - PUT
+      - PATCH
+      - DELETE
+  mcp-enduser-api-delete:
+    host: '*'
+    paths: '/api/endusers/:_ashareId'
+    methods:
+      - DELETE
+  mcp-enduser-mcpserver-assign:
+    host: '*'
+    paths: '/api/mcpservers/:_id/endusers'
+    methods:
+      - PUT
+  mcp-enduser-api-mcp-server-groups-bulk-assign:
+    host: '*'
+    paths: '/api/mcpservers/:_id/groups'
+    methods:
+      - PUT
+      - POST
+  api-unset-draft:
+    host: '*'
+    paths: '/api/:modelPlural/:_id/unsetDraft'
+    methods:
+      - PUT
+  endpoint-service-v1-1:
+    host: '*'
+    paths: '/v1/sync/connections/:_connectionId/export'
+    methods:
+      - POST
+  endpoint-service-v1-3:
+    host: '*'
+    paths:
+      - '/v1/exports/:_id/invoke'
+      - '/v1/imports/:_id/invoke'
+    methods:
+      - POST
+  endpoint-service-v1-4:
+    host: '*'
+    paths:
+      - '/v1/connections/:_connectionId/export'
+      - '/v1/connections/:_connectionId/export/pages'
+    methods:
+      - POST
+  endpoint-service-v1-5:
+    host: '*'
+    paths:
+      - /v1/virtual
+      - /v1/virtual/export/pages
+    methods:
+      - POST
+  endpoint-service-v1-6:
+    host: '*'
+    paths: /v1/sync/virtualExport
+    methods:
+      - POST
+  endpoint-service-v1-7:
+    host: '*'
+    paths:
+      - /v1/processors/xmlParser
+      - /v1/processors/jsonParser
+      - /v1/processors/handlebars
+      - /v1/processors/transform
+      - /v1/processors/transformTwoDotZero
+      - /v1/processors/csvDataGenerator
+      - /v1/processors/branchFilter
+      - /v1/processors/javascript
+      - /v1/processors/csvParser
+      - /v1/processors/mapperProcessor
+      - /v1/processors/filter
+      - /v1/processors/handleBar/getContext
+      - /v1/processors/handleBar/evaluate
+      - /v1/processors
+    methods:
+      - POST
+  endpoint-service-v1-8:
+    host: '*'
+    paths:
+      - /v1/processors
+      - '/v1/processors/handlebars/connection/:_connectionId/evaluate'
+    methods:
+      - GET
+  endpoint-service-v1-9:
+    host: '*'
+    paths:
+      - /v1/pageProcessors/preview
+      - /v1/exports/preview
+      - /v1/imports/preview
+      - /v1/imports/preview/compare
+    methods:
+      - POST
+  endpoint-service-v1-10:
+    host: '*'
+    paths:
+      - '/v1/integrations/:_integrationId/flows/:_flowId/exports/preview'
+      - '/v1/integrations/:_integrationId/exports/preview'
+    methods:
+      - POST
+  endpoint-service-v1-11:
+    host: '*'
+    paths: /v1/netsuite/metadata/suitescript/connections/*
+    methods:
+      - GET
+  endpoint-service-v1-12:
+    host: '*'
+    paths: /v1/netsuite/metadata/suitescript/connections/*
+    methods:
+      - POST
+  endpoint-service-v1-13:
+    host: '*'
+    paths: /v1/netsuite/metadata/webservices/connections/*
+    methods:
+      - GET
+  endpoint-service-v1-14:
+    host: '*'
+    paths: /v1/netsuite/metadata/webservices/connections/*
+    methods:
+      - POST
+  endpoint-service-v1-15:
+    host: '*'
+    paths: '/v1/salesforce/metadata/connections/:_connectionId/query/columns'
+    methods:
+      - POST
+  endpoint-service-v1-16:
+    host: '*'
+    paths: '/v1/connections/:_id/proxy'
+    methods:
+      - POST
+  endpoint-service-v1-17:
+    host: '*'
+    paths: '/v1/apis/:_id/request'
+    methods:
+      - POST
+      - GET
+      - PUT
+      - DELETE
+  endpoint-service-v1-18:
+    host: '*'
+    paths: '/v1/connections/:_connectionId/metadata'
+    methods:
+      - PUT
+  endpoint-service-v1-19:
+    host: '*'
+    paths: /v1/netsuiteDA/metadata
+    methods:
+      - GET
+  endpoint-service-v1-20:
+    host: '*'
+    paths:
+      - '/v1/connections/:_id/ping'
+    methods:
+      - GET
+  endpoint-service-v1-21:
+    host: '*'
+    paths:
+      - /v1/connections/ping
+      - '/v1/connections/:_id/ping'
+    methods:
+      - POST
+  endpoint-service-v1-22:
+    host: '*'
+    paths:
+      - '/v1/connection/:_connectionId/oauth2'
+      - '/v1/connections/:_connectionId/oauth2'
+    methods:
+      - GET
+  endpoint-service-v1-23:
+    host: '*'
+    paths: '/v1/shipworks/:_id/request'
+    methods:
+      - POST
+      - GET
+      - PUT
+      - DELETE
+  endpoint-service-v1-24:
+    host: '*'
+    paths: /v1/blob
+    methods:
+      - POST
+  endpoint-service-v1-25:
+    host: '*'
+    paths: '/v1/blob/:blobKey'
+    methods:
+      - GET
+  endpoint-service-v1-26:
+    host: '*'
+    paths:
+      - '/v1/connections/:_connectionId/import'
+      - '/v1/integrations/:_integrationId/flows/:_flowId/connections/:_connectionId/import'
+      - '/v1/integrations/:_integrationId/tools/:_toolId/connections/:_connectionId/import'
+      - '/v1/integrations/:_integrationId/apis/:_apiId/connections/:_connectionId/import'
+    methods:
+      - POST
+  endpoint-service-v1-27:
+    host: '*'
+    paths: /v1/netsuite/userroles
+    methods:
+      - POST
+  endpoint-service-v1-28:
+    host: '*'
+    paths: /v1/netsuite/alluserroles
+    methods:
+      - POST
+  endpoint-service-v1-29:
+    host: '*'
+    paths: /v1/netsuite/mappingsconverter
+    methods:
+      - POST
+  endpoint-service-v1-30:
+    host: '*'
+    paths: '/v1/connections/:_connectionId/import/map'
+    methods:
+      - POST
+  endpoint-service-v1-31:
+    host: '*'
+    paths: '/v1/salesforce/metadata/connections/:_connectionId/*'
+    methods:
+      - GET
+  endpoint-service-v1-32:
+    host: '*'
+    paths:
+      - '/v1/metadata/connections/:_connectionId/datasets/query'
+      - '/v1/metadata/connections/:_connectionId/datasets/details'
+      - '/v1/metadata/connections/:_connectionId/instances'
+    methods:
+      - POST
+  endpoint-service-v1-33:
+    host: '*'
+    paths:
+      - '/v1/metadata/connections/:_connectionId/instances'
+    methods:
+      - GET
+  endpoint-service-v1-34:
+    host: '*'
+    paths:
+      - '/netsuite/v1/sleep/:timeInSeconds'
+    methods:
+      - GET
+  endpoint-service-v1-35:
+    host: '*'
+    paths:
+      - /v1/s3/upload/initiate
+      - /v1/s3/download
+    methods:
+      - POST
+  endpoint-service-v1-36:
+    host: '*'
+    paths: '/v1/imports/:_importId/aiagents/chat'
+    methods:
+      - POST
+  endpoint-service-v1-37:
+    host: '*'
+    paths: '/v1/connections/:_id/distributedApps'
+    methods:
+      - GET
+  endpoint-service-v1-38:
+    host: '*'
+    paths: /v1/aiagents/chat
+    methods:
+      - POST
+  endpoint-service-v1-39:
+    host: '*'
+    paths: /v1/netsuiteDA/previewImportMappingFields
+    methods:
+      - PUT
+  endpoint-service-api1:
+    host: '*'
+    paths:
+      - /api/processors/xmlParser
+      - /api/processors/jsonParser
+      - /api/processors/handlebars
+      - /api/processors/transform
+      - /api/processors/transformTwoDotZero
+      - /api/processors/csvDataGenerator
+      - /api/processors/branchFilter
+      - /api/processors/javascript
+      - /api/processors/csvParser
+      - /api/processors/mapperProcessor
+      - /api/processors/filter
+      - /api/processors/handleBar/getContext
+      - /api/processors
+    methods:
+      - POST
+  endpoint-service-api2:
+    host: '*'
+    paths:
+      - /api/processors
+      - '/api/processors/handlebars/connection/:_connectionId/evaluate'
+    methods:
+      - GET
+  endpoint-service-api3:
+    host: '*'
+    paths:
+      - /api/pageProcessors/preview
+      - /api/exports/preview
+      - /api/imports/preview
+      - /api/imports/preview/compare
+      - /api/imports/aiagents/preview
+      - /api/pageProcessors/aiagents/preview
+    methods:
+      - POST
+  endpoint-service-api4:
+    host: '*'
+    paths:
+      - '/api/integrations/:_integrationId/flows/:_flowId/exports/preview'
+      - '/api/integrations/:_integrationId/exports/preview'
+    methods:
+      - POST
+  endpoint-service-api5:
+    host: '*'
+    paths: /api/netsuite/metadata/suitescript/connections/*
+    methods:
+      - GET
+  endpoint-service-api6:
+    host: '*'
+    paths: /api/netsuite/metadata/suitescript/connections/*
+    methods:
+      - POST
+  endpoint-service-api7:
+    host: '*'
+    paths:
+      - /api/netsuite/metadata/webservices/connections/*
+    methods:
+      - GET
+  endpoint-service-api8:
+    host: '*'
+    paths:
+      - /api/netsuite/metadata/webservices/connections/*
+    methods:
+      - POST
+  endpoint-service-api9:
+    host: '*'
+    paths: '/api/salesforce/metadata/connections/:_connectionId/query/columns'
+    methods:
+      - POST
+  endpoint-service-api10:
+    host: '*'
+    paths: /netsuiteDA/previewImportMappingFields
+    methods:
+      - PUT
+  endpoint-service-api11:
+    host: '*'
+    paths: '/api/connections/:_connectionId/metadata'
+    methods:
+      - PUT
+  endpoint-service-api12:
+    host: '*'
+    paths: /api/netsuiteDA/metadata
+    methods:
+      - GET
+  endpoint-service-api13:
+    host: '*'
+    paths:
+      - '/api/connections/:_id/ping'
+    methods:
+      - GET
+  endpoint-service-api14:
+    host: '*'
+    paths:
+      - /api/connections/ping
+      - '/api/connections/:_id/ping'
+    methods:
+      - POST
+  endpoint-service-api15:
+    host: '*'
+    paths:
+      - '/api/connection/:_connectionId/revoke'
+    methods:
+      - GET
+  endpoint-service-api16:
+    host: '*'
+    paths:
+      - /connection/complete
+    methods:
+      - GET
+  endpoint-service-api17:
+    host: '*'
+    paths:
+      - /connection/oauth2callback
+    methods:
+      - GET
+  endpoint-service-api18:
+    host: '*'
+    paths:
+      - '/connection/:_connectionId/oauth2'
+    methods:
+      - GET
+  endpoint-service-api19:
+    host: '*'
+    paths: /api/suitescript/connections/*
+    methods:
+      - GET
+      - PUT
+      - POST
+      - DELETE
+  endpoint-service-api20:
+    host: '*'
+    paths: /connection/shopify/oauth2callback
+    methods:
+      - GET
+  endpoint-service-api21:
+    host: '*'
+    paths: '/api/connection/:_connectionId/generateoauth2token'
+    methods:
+      - GET
+  endpoint-service-api22:
+    host: '*'
+    paths: '/api/concurconnect/:module'
+    methods:
+      - POST
+  endpoint-service-api23:
+    host: '*'
+    paths: /api/netsuite/userroles
+    methods:
+      - POST
+  endpoint-service-api24:
+    host: '*'
+    paths: /api/netsuite/alluserroles
+    methods:
+      - POST
+  endpoint-service-api25:
+    host: '*'
+    paths: '/api/connections/:_id/distributedApps'
+    methods:
+      - GET
+  endpoint-service-api26:
+    host: '*'
+    paths: '/netSuiteWS/searchMetadata/:_connectionId'
+    methods:
+      - GET
+  endpoint-service-api27:
+    host: '*'
+    paths: '/netSuiteWS/recordMetadata/:_connectionId'
+    methods:
+      - GET
+  endpoint-service-api28:
+    host: '*'
+    paths: '/api/:appName/generate-token'
+    methods:
+      - POST
+  endpoint-service-api29:
+    host: '*'
+    paths: /api/oneToMany/extract
+    methods:
+      - POST
+  endpoint-service-api30:
+    host: '*'
+    paths:
+      - '/api/salesforce/metadata/connections/:_connectionId/*'
+    methods:
+      - GET
+  endpoint-service-api31:
+    host: '*'
+    paths: '/connections/:_connectionId/mappingPreview'
+    methods:
+      - PUT
+  endpoint-service-api32:
+    host: '*'
+    paths:
+      - '/api/metadata/connections/:_connectionId/datasets/query'
+      - '/api/metadata/connections/:_connectionId/datasets/details'
+    methods:
+      - POST
+  endpoint-service-api33:
+    host: '*'
+    paths:
+      - '/api/metadata/connections/:_connectionId/instances'
+    methods:
+      - GET
+  endpoint-service-api34:
+    host: '*'
+    paths: /api/lookupcaches/preview
+    methods:
+      - POST
+  endpoint-service-api35:
+    host: '*'
+    paths:
+      - /api/requests/preview
+      - /api/responses/preview
+    methods:
+      - POST
+  endpoint-service-api36:
+    host: '*'
+    paths:
+      - /api/jdbcWallet/getServiceNames
+    methods:
+      - PUT
+  endpoint-service-api37:
+    host: '*'
+    paths: '/api/connections/:_connectionId/queryBuilder'
+    methods:
+      - POST
+  endpoint-service-api38:
+    host: '*'
+    paths:
+      - '/api/connections/requests/:reqAndResKey'
+    methods:
+      - GET
+  endpoint-service-api39:
+    host: '*'
+    paths: '/api/connections/:_connectionId/mcp/tools'
+    methods:
+      - GET
+  endpoint-service-api40:
+    host: '*'
+    paths: /api/imports/mockResponseStub
+    methods:
+      - POST
+  endpoint-service-api41:
+    host: '*'
+    paths: '/api/imports/:_importId/aiagents/chat'
+    methods:
+      - POST
+  endpoint-service-api42:
+    host: '*'
+    paths: '/api/connection/:_connectionId/oauth2/authuri'
+    methods:
+      - GET
+  endpoint-service-api43:
+    host: '*'
+    paths: /api/aiagents/chat
+    methods:
+      - POST
+  endpoint-service-api44:
+    host: '*'
+    paths: '/api/connections/:_connectionId/mcp/capabilities'
+    methods:
+      - GET
+  endpoint-service-api45:
+    host: '*'
+    paths: '/api/oauth2/:application/connect'
+    methods:
+      - POST
+  endpoint-service-api46:
+    host: '*'
+    paths: '/api/connections/:_connectionId/httpFile/browse'
+    methods:
+      - POST
+  endpoint-service-api47:
+    host: '*'
+    paths: /api/netsuiteDA/previewImportMappingFields
+    methods:
+      - PUT
+  endpoint-service-v1keepitlast:
+    host: '*'
+    paths: '/:apiIdentifier'
+    methods:
+      - POST
+policies:
+  - cors
+  - expression
+  - proxy
+  - websocket-proxy
+  - bodyparser
+  - cookieparser
+  - sessionfeed
+  - csrftoken
+  - jwt-agent-bearer-token
+  - jwt-agentextension-bearer-token
+  - jwt-autodeploy-bearer-token
+  - jwt-healthcheck-bearer-token
+  - jwt-bearer-token
+  - jwt-di-bearer-token
+  - jwt-microservices-bearer-token
+  - jwt-system-bearer-token
+  - jwt-system-netsuite-bearer-token
+  - jwt-session-token
+  - jwt-ashare-session-token
+  - jwt-shipworks-bearer-token
+  - ott-auth-policy
+  - mcp-oauth
+  - celigo-mcp-oauth
+  - add-canary-header
+  - get-as2-user-details
+  - response-transformer
+  - jwt-featured-templates
+  - microservice-router
+  - sns-callback-auth
+pipelines:
+  webhooks:
+    apiEndpoints:
+      - webhook-api1
+      - webhook-api2
+      - webhook-api3
+      - webhook-api4
+      - webhook-api5
+      - webhook-api6
+      - webhook-api7
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: webhooks
+              changeOrigin: true
+              xfwd: true
+  as2microservice:
+    apiEndpoints:
+      - as2-webhook
+    policies:
+      - get-as2-user-details: null
+      - add-canary-header: null
+      - response-transformer: null
+      - proxy:
+          - action:
+              serviceEndpoint: as2microservice
+              changeOrigin: true
+              xfwd: true
+  gptverse:
+    apiEndpoints:
+      - gptverse-ui
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: gptverse
+              changeOrigin: true
+              xfwd: true
+  gptverse-v1-old:
+    apiEndpoints:
+      - gptverse-api-old
+    policies:
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: gptverse
+              changeOrigin: true
+              xfwd: true
+  gptverse-v1:
+    apiEndpoints:
+      - gptverse-api
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: gptverse
+              changeOrigin: true
+              xfwd: true
+  system-no-auth:
+    apiEndpoints:
+      - system-api39
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: systemservice
+              changeOrigin: true
+              xfwd: true
+  system-auth-token:
+    apiEndpoints:
+      - system-api42
+      - system-api44
+      - system-api46
+      - system-api48
+      - system-api49
+      - system-api50
+      - system-api51
+      - system-api53
+    policies:
+      - jwt-bearer-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: systemservice
+              changeOrigin: true
+              xfwd: true
+  system-bearer-token:
+    apiEndpoints:
+      - system-api1
+      - system-api2
+      - system-api3
+      - system-api4
+      - system-api5
+      - system-api6
+      - system-api7
+      - system-api8
+      - system-api22
+      - system-api26
+      - system-api27
+      - system-api35
+      - system-api36
+      - system-api38
+      - system-api45
+      - system-api52
+    policies:
+      - jwt-system-bearer-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: systemservice
+              changeOrigin: true
+              xfwd: true
+  system-netsuite-bearer-token:
+    apiEndpoints:
+      - system-api37
+      - system-api41
+    policies:
+      - jwt-system-netsuite-bearer-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: systemservice
+              changeOrigin: true
+              xfwd: true
+  system-healthCheck-bearer-token:
+    apiEndpoints:
+      - system-api9
+      - system-api10
+      - system-api11
+      - system-api12
+      - system-api13
+      - system-api14
+      - system-api15
+      - system-api16
+      - system-api17
+      - system-api18
+      - system-api19
+      - system-api20
+      - system-api21
+      - system-api28
+      - system-api47
+    policies:
+      - jwt-healthcheck-bearer-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: systemservice
+              changeOrigin: true
+              xfwd: true
+  system-microservices-bearer-token:
+    apiEndpoints:
+      - system-api29
+      - system-api30
+      - system-api30-1
+      - system-api31
+      - system-api32
+      - system-api33
+      - system-api43
+    policies:
+      - jwt-microservices-bearer-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: systemservice
+              changeOrigin: true
+              xfwd: true
+  system-autodeploy-bearer-token:
+    apiEndpoints:
+      - system-api23
+      - system-api24
+      - system-api25
+    policies:
+      - jwt-autodeploy-bearer-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: systemservice
+              changeOrigin: true
+              xfwd: true
+  payload-logging:
+    apiEndpoints:
+      - system-api34
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: systemservice
+              changeOrigin: true
+              xfwd: true
+  api-execution-api:
+    apiEndpoints:
+      - api-execution-api1
+      - api-execution-api2
+      - api-execution-api3
+      - api-execution-api4
+      - api-execution-api5
+      - api-execution-api6
+      - api-execution-api7
+      - api-execution-api8
+      - api-execution-api9
+      - api-execution-api10
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: apiexecution
+              changeOrigin: true
+              xfwd: true
+  api-execution-v1:
+    apiEndpoints:
+      - api-execution-v1-1
+      - api-execution-v1-2
+      - api-execution-v1-3
+      - api-execution-v1-4
+      - api-execution-v1-5
+      - api-execution-v1-6
+      - api-execution-v1-7
+      - api-execution-v1-8
+      - api-execution-v1-9
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: apiexecution
+              changeOrigin: true
+              xfwd: true
+  mcp-management-api:
+    apiEndpoints:
+      - mcp-management-api1
+      - mcp-management-api2
+      - mcp-management-api3
+      - mcp-management-api4
+      - mcp-management-api-recyclebin1
+      - mcp-management-api-recyclebin2
+      - mcp-management-api-recyclebin3
+      - mcp-management-api-recyclebin4
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableMCPServers
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "mcpservers"
+            action:
+              serviceEndpoint: mcpservers
+              changeOrigin: true
+              xfwd: true
+  mcp-management-v1:
+    apiEndpoints:
+      - mcp-management-v1-1
+      - mcp-management-v1-2
+      - mcp-management-v1-3
+      - mcp-management-v1-4
+      - mcp-management-v1-recyclebin1
+      - mcp-management-v1-recyclebin2
+      - mcp-management-v1-recyclebin3
+      - mcp-management-v1-recyclebin4
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableMCPServers
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "mcpservers"
+            action:
+              serviceEndpoint: mcpservers
+              changeOrigin: true
+              xfwd: true
+  mcp-servers:
+    apiEndpoints:
+      - mcp-servers-api1
+    policies:
+      - cors:
+          - action:
+              origin: true
+              exposedHeaders:
+                - mcp-session-id
+                - WWW-Authenticate
+      - mcp-oauth: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: mcpservers
+              changeOrigin: true
+              xfwd: true
+  mcp-servers-direct:
+    apiEndpoints:
+      - mcp-servers-api3
+    policies:
+      - cors:
+          - action:
+              origin: true
+              exposedHeaders:
+                - mcp-session-id
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: mcpservers
+              changeOrigin: true
+              xfwd: true
+  mcp-servers-preview:
+    apiEndpoints:
+      - mcp-servers-api2
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: mcpservers
+              changeOrigin: true
+              xfwd: true
+  mcp-oauth-resource-metadata:
+    apiEndpoints:
+      - mcp-oauth-resource-metadata
+    policies:
+      - cors:
+          - action:
+              origin: true
+              exposedHeaders:
+                - WWW-Authenticate
+      - proxy:
+          - action:
+              serviceEndpoint: mcpservers
+              changeOrigin: true
+              xfwd: true
+  mcp-oauth-as-discovery:
+    apiEndpoints:
+      - mcp-oauth-as-discovery
+    policies:
+      - cors:
+          - action:
+              origin: true
+      - proxy:
+          - action:
+              serviceEndpoint: authenticationservice
+              changeOrigin: true
+              xfwd: true
+  io-mcp-server:
+    apiEndpoints:
+      - io-mcp-server-api
+    policies:
+      - cors:
+          - action:
+              origin: true
+              exposedHeaders:
+                - mcp-session-id
+                - WWW-Authenticate
+      - celigo-mcp-oauth: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: iomcpserver
+              changeOrigin: true
+              xfwd: true
+  celigo-mcp-oauth-resource-metadata:
+    apiEndpoints:
+      - celigo-mcp-oauth-resource-metadata
+    policies:
+      - cors:
+          - action:
+              origin: true
+      - proxy:
+          - action:
+              serviceEndpoint: iomcpserver
+              changeOrigin: true
+              xfwd: true
+  authentication:
+    apiEndpoints:
+      - api1
+      - api2
+      - api3
+      - api4
+      - api5
+      - api6
+      - api7
+      - api8
+      - api9
+      - api10
+      - api11
+      - api12
+      - api13
+      - api14
+      - api15
+      - api16
+      - api17
+      - api18
+      - api19
+      - api20
+      - api21
+      - api22
+      - api23
+      - api24
+      - api25
+      - api26
+      - api27
+      - api28
+      - api29
+      - api30
+      - api31
+      - api32
+      - api33
+      - api34
+      - api166
+      - api167
+      - api219
+      - api227
+      - api228
+      - api249
+      - api252
+      - api253
+      - api254
+      - oidc-public-1
+      - api268
+      - api-enduser-idp-metadata
+      - api-enduser-idp-callback
+      - api-enduser-invite-metadata
+      - api-enduser-invite
+      - api270
+      - api271
+      - api272
+      - api273
+      - api279
+      - api281
+      - api282
+      - api283
+      - sso-initiate-test
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: authenticationservice
+              changeOrigin: true
+              xfwd: true
+  data-catalog-v1-diuser-pipe:
+    apiEndpoints:
+      - data-catalog-v1-1
+      - data-catalog-v1-2
+    policies:
+      - jwt-di-bearer-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: datacatalogservice
+              changeOrigin: true
+              xfwd: true
+  schema-inference-v1-diuser-pipe:
+    apiEndpoints:
+      - schema-inference-v1-1
+      - schema-inference-v1-2
+    policies:
+      - jwt-di-bearer-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: schemainferenceservice
+              changeOrigin: true
+              xfwd: true
+  di-management-v1-diuser-pipe:
+    apiEndpoints:
+      - di-management-v1-3
+      - di-management-v1-4
+      - di-management-v1-5
+      - di-management-v1-6
+      - di-management-v1-7
+      - di-management-v1-8
+    policies:
+      - jwt-di-bearer-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: dimanagementservice
+              changeOrigin: true
+              xfwd: true
+  di-management-v1-pipe:
+    apiEndpoints:
+      - di-management-v1-1
+      - di-management-v1-2
+    policies:
+      - jwt-bearer-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: dimanagementservice
+              changeOrigin: true
+              xfwd: true
+  di-management-api-pipe:
+    apiEndpoints:
+      - di-management-api1
+      - di-management-api2
+      - di-management-api3
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: dimanagementservice
+              changeOrigin: true
+              xfwd: true
+  featured-templates-v1-pipe:
+    apiEndpoints:
+      - featured-templates-v1-1
+      - featured-templates-v1-2
+    policies:
+      - jwt-featured-templates: null
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  integrator-bff:
+    apiEndpoints:
+      - integrator-bff-api1
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: integratorbff
+              changeOrigin: true
+              xfwd: true
+  agents-api:
+    apiEndpoints:
+      - api176
+      - api177
+      - api178
+      - api179
+      - api212
+      - agent-management-service-api-dependencies
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableAMS
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "agentmanagementservice"
+            action:
+              serviceEndpoint: agentmanagementservice
+              changeOrigin: true
+              xfwd: true
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  celigo-agent-rest:
+    apiEndpoints:
+      - celigo-agent-api
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - proxy:
+          - action:
+              serviceEndpoint: celigoagent
+              changeOrigin: true
+              xfwd: true
+  celigo-agent-websocket:
+    apiEndpoints:
+      - celigo-agent-websocket
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - websocket-proxy:
+          - action:
+              serviceEndpoint: celigoagent
+              changeOrigin: true
+              xfwd: true
+  agents-v1:
+    apiEndpoints:
+      - resource-management-agent-api4
+      - resource-management-agent-api5
+      - resource-management-agent-api6
+      - resource-management-agent-api7
+      - resource-management-agent-api11
+      - agent-management-service-v1-dependencies
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableAMS
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "agentmanagementservice"
+            action:
+              serviceEndpoint: agentmanagementservice
+              changeOrigin: true
+              xfwd: true
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  agents-v1-agent-bearer:
+    apiEndpoints:
+      - resource-management-api81
+      - resource-management-agent-api1
+      - resource-management-agent-api2
+      - resource-management-agent-api3
+      - resource-management-agent-api8
+      - resource-management-agent-api9
+      - resource-management-agent-api10
+    policies:
+      - jwt-agent-bearer-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableAMS
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "agentmanagementservice"
+            action:
+              serviceEndpoint: agentmanagementservice
+              changeOrigin: true
+              xfwd: true
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  agentExtensions-v1:
+    apiEndpoints:
+      - resource-management-api80
+      - resource-management-api82
+      - resource-management-api83
+      - resource-management-api84
+      - resource-management-api85
+    policies:
+      - jwt-agentextension-bearer-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableAgentExtension
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "agentmanagementservice"
+            action:
+              serviceEndpoint: agentmanagementservice
+              changeOrigin: true
+              xfwd: true
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  connector-framework-service-api:
+    apiEndpoints:
+      - api201
+      - api202
+      - api203
+      - api204
+      - api205
+      - api206
+      - api208
+      - api209
+      - api214
+      - api215
+      - api220
+      - api246
+      - api247
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: connectorframeworkservice
+              changeOrigin: true
+              xfwd: true
+  connector-framework-service-v1:
+    apiEndpoints:
+      - resource-management-api156
+      - resource-management-api157
+      - resource-management-api158
+      - resource-management-api159
+      - resource-management-api160
+      - resource-management-api161
+      - resource-management-api163
+      - resource-management-api164
+      - resource-management-api169
+      - resource-management-api170
+      - resource-management-api197
+      - resource-management-api198
+      - resource-management-api174
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: connectorframeworkservice
+              changeOrigin: true
+              xfwd: true
+  connector-framework-service-public-api:
+    apiEndpoints:
+      - resource-management-public-api1
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: connectorframeworkservice
+              changeOrigin: true
+              xfwd: true
+  audit-api:
+    apiEndpoints:
+      - api197
+      - api198
+      - api199
+      - api200
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableAuditService
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "auditservice"
+            action:
+              serviceEndpoint: auditservice
+              changeOrigin: true
+              xfwd: true
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  audit-v1:
+    apiEndpoints:
+      - resource-management-api152
+      - resource-management-api153
+      - resource-management-api154
+      - resource-management-api155
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableAuditService
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "auditservice"
+            action:
+              serviceEndpoint: auditservice
+              changeOrigin: true
+              xfwd: true
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  audit-v1-post:
+    apiEndpoints:
+      - audit-service-api1
+      - audit-service-api2
+      - audit-service-api3
+      - audit-service-api4
+      - audit-service-api5
+      - audit-service-api6
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: auditservice
+              changeOrigin: true
+              xfwd: true
+  edi-service-rm-origin-api:
+    apiEndpoints:
+      - edi-service-api-signedurl
+      - edi-service-api-fadetails
+      - edi-service-api-transactions-patch
+      - edi-service-api-query
+      - edi-service-api-profiles-generate
+      - edi-service-api-edifile
+      - edi-service-api-mdn
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableEDIService
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "ediservice"
+            action:
+              serviceEndpoint: ediservice
+              changeOrigin: true
+              xfwd: true
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  edi-service-rm-origin-v1:
+    apiEndpoints:
+      - edi-service-v1-signedurl
+      - edi-service-v1-fadetails
+      - edi-service-v1-transactions-patch
+      - edi-service-v1-query
+      - edi-service-v1-edifile
+      - edi-service-v1-mdn
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableEDIService
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "ediservice"
+            action:
+              serviceEndpoint: ediservice
+              changeOrigin: true
+              xfwd: true
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  edi-service-processors-api:
+    apiEndpoints:
+      - edi-service-processors-api-parser
+      - edi-service-processors-api-generator
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableEDIServiceProcessors
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "ediservice"
+            action:
+              serviceEndpoint: ediservice
+              changeOrigin: true
+              xfwd: true
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+              changeOrigin: true
+              xfwd: true
+  edi-service-processors-v1:
+    apiEndpoints:
+      - edi-service-processors-v1-parser
+      - edi-service-processors-v1-generator
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - microservice-router:
+          - action:
+              flag: enableEDIServiceProcessors
+      - proxy:
+          - condition:
+              name: expression
+              expression: egContext.routeTargetMS === "ediservice"
+            action:
+              serviceEndpoint: ediservice
+              changeOrigin: true
+              xfwd: true
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+              changeOrigin: true
+              xfwd: true
+  flowmgmt-api-pipe:
+    apiEndpoints:
+      - flowmgmt-api1
+      - flowmgmt-api2
+      - flowmgmt-api3
+      - flowmgmt-api4
+      - flowmgmt-api5
+      - flowmgmt-api6
+      - flowmgmt-api7
+      - flowmgmt-api9
+      - flowmgmt-api10
+      - flowmgmt-api11
+      - flowmgmt-api12
+      - flowmgmt-api13
+      - flowmgmt-api14
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: flowmgmtservice
+              changeOrigin: true
+              xfwd: true
+  flowmgmt-v1-pipe:
+    apiEndpoints:
+      - flowmgmt-v11
+      - flowmgmt-v12
+      - flowmgmt-v13
+      - flowmgmt-v14
+      - flowmgmt-v15
+      - flowmgmt-v17
+      - flowmgmt-v18
+      - flowmgmt-v19
+      - flowmgmt-v20
+      - flowmgmt-v21
+      - flowmgmt-v22
+      - flowmgmt-v23
+      - flowmgmt-v24
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: flowmgmtservice
+              changeOrigin: true
+              xfwd: true
+  file-storage-internal-callback-pipe:
+    apiEndpoints:
+      - file-storage-internal-callback
+    policies:
+      - sns-callback-auth:
+          - action:
+              allowedTopicArnsEnvVar: FILE_STORAGE_SNS_TOPIC_ARNS
+      - proxy:
+          - action:
+              serviceEndpoint: filestorage
+              changeOrigin: true
+              xfwd: true
+  file-storage-v1-pipe:
+    apiEndpoints:
+      - file-storage-v1
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: filestorage
+              changeOrigin: true
+              xfwd: true
+  file-storage-api-pipe:
+    apiEndpoints:
+      - file-storage-api
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: filestorage
+              changeOrigin: true
+              xfwd: true
+  resource-management-api:
+    apiEndpoints:
+      - api35
+      - api36
+      - api37
+      - api38
+      - api39
+      - api40
+      - api41
+      - api42
+      - api43
+      - api44
+      - api45
+      - api46
+      - api47
+      - api48
+      - api49
+      - api50
+      - api51
+      - api52
+      - api53
+      - api54
+      - api55
+      - api56
+      - api57
+      - api58
+      - api59
+      - api60
+      - api61
+      - api62
+      - api63
+      - api64
+      - api65
+      - api66
+      - api67
+      - api68
+      - api69
+      - api70
+      - api71
+      - api72
+      - api73
+      - api74
+      - api75
+      - api76
+      - api77
+      - api78
+      - api79
+      - api80
+      - api81
+      - api82
+      - api83
+      - api84
+      - api85
+      - api86
+      - api87
+      - api88
+      - api89
+      - api90
+      - api91
+      - api92
+      - api93
+      - api94
+      - api95
+      - api97
+      - api98
+      - api99
+      - api100
+      - api103
+      - api104
+      - api105
+      - api106
+      - api107
+      - api108
+      - api109
+      - api110
+      - api111
+      - api112
+      - api113
+      - api114
+      - api115
+      - api116
+      - api117
+      - api118
+      - api119
+      - api120
+      - api121
+      - api122
+      - api123
+      - api124
+      - api125
+      - api126
+      - api127
+      - api128
+      - api129
+      - api130
+      - api131
+      - api132
+      - api133
+      - api134
+      - api135
+      - api136
+      - api137
+      - api138
+      - api139
+      - api140
+      - api141
+      - api142
+      - api143
+      - api144
+      - api145
+      - api146
+      - api147
+      - api148
+      - api149
+      - api150
+      - api151
+      - api152
+      - api153
+      - api154
+      - api155
+      - api156
+      - api157
+      - api158
+      - api159
+      - api160
+      - api161
+      - api162
+      - api163
+      - api164
+      - api165
+      - api168
+      - api169
+      - api170
+      - api172
+      - api173
+      - api174
+      - api175
+      - api180
+      - api181
+      - api182
+      - api183
+      - api184
+      - api185
+      - api186
+      - api187
+      - api188
+      - api189
+      - api190
+      - api191
+      - api192
+      - api193
+      - api194
+      - api195
+      - api196
+      - api207
+      - api210
+      - api211
+      - api213
+      - api216
+      - api217
+      - api218
+      - api221
+      - api222
+      - api223
+      - api224
+      - api225
+      - api230
+      - api231
+      - api232
+      - api233
+      - api235
+      - api236
+      - api237
+      - api238
+      - api239
+      - api240
+      - api241
+      - api245
+      - api248
+      - resource-management-sync-dataset-1
+      - resource-management-sync-dataset-2
+      - resource-management-sync-dataset-3
+      - resource-management-sync-dataset-4
+      - api253
+      - api254
+      - api255
+      - api256
+      - api257
+      - api258
+      - api259
+      - api260
+      - api261
+      - api262
+      - api263
+      - api264
+      - api265
+      - api266
+      - api267
+      - api274
+      - api275
+      - api276
+      - api277
+      - api278
+      - api280
+      - api284
+      - api285
+      - api286
+      - api287
+      - api289
+      - api290
+      - api291
+      - api292
+      - api293
+      - tool-api-list
+      - tool-api-crud
+      - tool-api-integration-list
+      - tool-api-replace-connection
+      - tool-api-connections
+      - tool-api-preview-helper
+      - api296
+      - api297
+      - api298
+      - api299
+      - api300
+      - api301
+      - api302
+      - api303
+      - api304
+      - api305
+      - api306
+      - api307
+      - api311
+      - api312
+      - api313
+      - api314
+      - api315
+      - api316
+      - api317
+      - api318
+      - api319
+      - api320
+      - api321
+      - api322
+      - api323
+      - api324
+      - api325
+      - api326
+      - api331
+      - mcp-enduser-api-get
+      - mcp-enduser-api-post
+      - mcp-enduser-api-resource-by-id
+      - mcp-enduser-api-delete
+      - mcp-enduser-mcpserver-assign
+      - mcp-enduser-api-mcp-server-groups-bulk-assign
+      - api-unset-draft
+      - mcp-unset-draft-claim
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  resource-management-api-post-proxy-session-update:
+    apiEndpoints:
+      - api171
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+              postProxyAsyncCall: resetSessionToken
+  resource-management-ashare-api:
+    apiEndpoints:
+      - api96
+      - api101
+      - api102
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-ashare-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  resource-management-v1:
+    apiEndpoints:
+      - resource-management-api1
+      - resource-management-api2
+      - resource-management-api3
+      - resource-management-api4
+      - resource-management-api5
+      - resource-management-api6
+      - resource-management-api7
+      - resource-management-api8
+      - resource-management-api9
+      - resource-management-api10
+      - resource-management-api11
+      - resource-management-api12
+      - resource-management-api13
+      - resource-management-api14
+      - resource-management-api15
+      - resource-management-api16
+      - resource-management-api17
+      - resource-management-api18
+      - resource-management-api19
+      - resource-management-api20
+      - resource-management-api21
+      - resource-management-api22
+      - resource-management-api23
+      - resource-management-api24
+      - resource-management-api25
+      - resource-management-api26
+      - resource-management-api27
+      - resource-management-api28
+      - resource-management-api29
+      - resource-management-api30
+      - resource-management-api31
+      - resource-management-api32
+      - resource-management-api33
+      - resource-management-api34
+      - resource-management-api35
+      - resource-management-api36
+      - resource-management-api37
+      - resource-management-api38
+      - resource-management-api39
+      - resource-management-api40
+      - resource-management-api41
+      - resource-management-api42
+      - resource-management-api43
+      - resource-management-api44
+      - resource-management-api45
+      - resource-management-api46
+      - resource-management-api47
+      - resource-management-api48
+      - resource-management-api49
+      - resource-management-api50
+      - resource-management-api51
+      - resource-management-api52
+      - resource-management-api53
+      - resource-management-api54
+      - resource-management-api55
+      - resource-management-api56
+      - resource-management-api57
+      - resource-management-api58
+      - resource-management-api59
+      - resource-management-api60
+      - resource-management-api61
+      - resource-management-api62
+      - resource-management-api63
+      - resource-management-api64
+      - resource-management-api65
+      - resource-management-api66
+      - resource-management-api67
+      - resource-management-api68
+      - resource-management-api69
+      - resource-management-api70
+      - resource-management-api71
+      - resource-management-api72
+      - resource-management-api73
+      - resource-management-api74
+      - resource-management-api75
+      - resource-management-api76
+      - resource-management-api77
+      - resource-management-api78
+      - resource-management-api79
+      - resource-management-api86
+      - resource-management-api87
+      - resource-management-api88
+      - resource-management-api89
+      - resource-management-api90
+      - resource-management-api91
+      - resource-management-api92
+      - resource-management-api93
+      - resource-management-api94
+      - resource-management-api95
+      - resource-management-api96
+      - resource-management-api97
+      - resource-management-api98
+      - resource-management-api99
+      - resource-management-api100
+      - resource-management-api101
+      - resource-management-api102
+      - resource-management-api103
+      - resource-management-api104
+      - resource-management-api105
+      - resource-management-api106
+      - resource-management-api107
+      - resource-management-api108
+      - resource-management-api109
+      - resource-management-api110
+      - resource-management-api111
+      - resource-management-api112
+      - resource-management-api113
+      - resource-management-api114
+      - resource-management-api115
+      - resource-management-api116
+      - resource-management-api117
+      - resource-management-api118
+      - resource-management-api119
+      - resource-management-api120
+      - resource-management-api121
+      - resource-management-api122
+      - resource-management-api123
+      - resource-management-api124
+      - resource-management-api125
+      - resource-management-api126
+      - resource-management-api127
+      - resource-management-api128
+      - resource-management-api129
+      - resource-management-api130
+      - resource-management-api131
+      - resource-management-api132
+      - resource-management-api139
+      - resource-management-api140
+      - resource-management-api141
+      - resource-management-api142
+      - resource-management-api143
+      - resource-management-api144
+      - resource-management-api145
+      - resource-management-api146
+      - resource-management-api147
+      - resource-management-api148
+      - resource-management-api149
+      - resource-management-api150
+      - resource-management-api151
+      - resource-management-api162
+      - resource-management-api165
+      - resource-management-api166
+      - resource-management-api168
+      - resource-management-api171
+      - resource-management-api172
+      - resource-management-api173
+      - resource-management-api175
+      - resource-management-api176
+      - resource-management-api177
+      - resource-management-api178
+      - resource-management-api179
+      - resource-management-api180
+      - resource-management-api181
+      - resource-management-api182
+      - resource-management-api183
+      - resource-management-api184
+      - resource-management-api186
+      - resource-management-api187
+      - resource-management-api188
+      - resource-management-api189
+      - resource-management-api191
+      - resource-management-api196
+      - resource-management-api199
+      - resource-management-api200
+      - resource-management-api201
+      - resource-management-api202
+      - resource-management-api203
+      - resource-management-api204
+      - resource-management-api205
+      - resource-management-api206
+      - resource-management-api207
+      - resource-management-api208
+      - resource-management-api209
+      - resource-management-api210
+      - resource-management-api211
+      - resource-management-api212
+      - resource-management-api213
+      - resource-management-api214
+      - resource-management-api215
+      - resource-management-tool-api-list
+      - resource-management-tool-api-crud
+      - resource-management-tool-api-integration-list
+      - resource-management-api-integration-list
+      - resource-management-tool-api-replace-connection
+      - resource-management-tool-api-connections
+      - resource-management-api216
+      - resource-management-api218
+      - resource-management-api219
+      - resource-management-api220
+      - resource-management-api221
+      - resource-management-api222
+      - resource-management-api228
+      - resource-management-api229
+      - resource-management-api230
+      - resource-management-api231
+      - resource-management-api232
+      - resource-management-api233
+      - resource-management-api237
+      - resource-management-mcp-enduser-api-get
+      - resource-management-mcp-enduser-api-post
+      - resource-management-mcp-enduser-api-resource-by-id
+      - resource-management-mcp-enduser-api-delete
+      - resource-management-mcp-enduser-mcpserver-assign
+      - resource-management-sync-dataset-5
+      - resource-management-sync-dataset-6
+      - resource-management-sync-dataset-7
+      - resource-management-sync-dataset-8
+      - resource-management-mcp-server-groups-bulk-assign
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  resource-management-public-api:
+    apiEndpoints:
+      - resource-management-public-api2
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: resourcemanagement
+              changeOrigin: true
+              xfwd: true
+  endpoint-service-v1:
+    apiEndpoints:
+      - endpoint-service-v1-1
+      - endpoint-service-v1-3
+      - endpoint-service-v1-4
+      - endpoint-service-v1-5
+      - endpoint-service-v1-6
+      - endpoint-service-v1-7
+      - endpoint-service-v1-8
+      - endpoint-service-v1-9
+      - endpoint-service-v1-10
+      - endpoint-service-v1-11
+      - endpoint-service-v1-12
+      - endpoint-service-v1-13
+      - endpoint-service-v1-14
+      - endpoint-service-v1-15
+      - endpoint-service-v1-16
+      - endpoint-service-v1-17
+      - endpoint-service-v1-18
+      - endpoint-service-v1-19
+      - endpoint-service-v1-20
+      - endpoint-service-v1-21
+      - endpoint-service-v1-22
+      - endpoint-service-v1-24
+      - endpoint-service-v1-25
+      - endpoint-service-v1-26
+      - endpoint-service-v1-27
+      - endpoint-service-v1-28
+      - endpoint-service-v1-29
+      - endpoint-service-v1-30
+      - endpoint-service-v1-31
+      - endpoint-service-v1-32
+      - endpoint-service-v1-33
+      - endpoint-service-v1-36
+      - endpoint-service-v1-37
+      - endpoint-service-v1-38
+      - endpoint-service-v1-39
+      - endpoint-service-v1keepitlast
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+              changeOrigin: true
+              xfwd: true
+  endpoint-service-authless:
+    apiEndpoints:
+      - endpoint-service-v1-34
+    policies:
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+              changeOrigin: true
+              xfwd: true
+  endpoint-service-agent:
+    apiEndpoints:
+      - endpoint-service-v1-35
+    policies:
+      - jwt-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+              changeOrigin: true
+              xfwd: true
+  endpoint-service-api:
+    apiEndpoints:
+      - endpoint-service-api1
+      - endpoint-service-api2
+      - endpoint-service-api3
+      - endpoint-service-api4
+      - endpoint-service-api5
+      - endpoint-service-api6
+      - endpoint-service-api7
+      - endpoint-service-api8
+      - endpoint-service-api9
+      - endpoint-service-api10
+      - endpoint-service-api11
+      - endpoint-service-api12
+      - endpoint-service-api13
+      - endpoint-service-api14
+      - endpoint-service-api15
+      - endpoint-service-api16
+      - endpoint-service-api18
+      - endpoint-service-api19
+      - endpoint-service-api21
+      - endpoint-service-api23
+      - endpoint-service-api24
+      - endpoint-service-api25
+      - endpoint-service-api26
+      - endpoint-service-api27
+      - endpoint-service-api28
+      - endpoint-service-api29
+      - endpoint-service-api30
+      - endpoint-service-api31
+      - endpoint-service-api32
+      - endpoint-service-api33
+      - endpoint-service-api34
+      - endpoint-service-api35
+      - endpoint-service-api36
+      - endpoint-service-api37
+      - endpoint-service-api38
+      - endpoint-service-api39
+      - endpoint-service-api40
+      - endpoint-service-api41
+      - endpoint-service-api42
+      - endpoint-service-api43
+      - endpoint-service-api44
+      - endpoint-service-api46
+      - endpoint-service-api47
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+              changeOrigin: true
+              xfwd: true
+  endpoint-service-shipworks-v1:
+    apiEndpoints:
+      - endpoint-service-v1-23
+    policies:
+      - bodyparser: null
+      - jwt-shipworks-bearer-token: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+  endpoint-service-shopify:
+    apiEndpoints:
+      - endpoint-service-api20
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token:
+          - action:
+              redirectTo: /signin?application=shopify
+              includeQueryParams: true
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+              changeOrigin: true
+              xfwd: true
+  endpoint-service-concur:
+    apiEndpoints:
+      - endpoint-service-api22
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token:
+          - action:
+              redirectTo: /signin?application=concur
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+              changeOrigin: true
+              xfwd: true
+  endpoint-service-walmart:
+    apiEndpoints:
+      - endpoint-service-api45
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - jwt-session-token:
+          - action:
+              redirectTo: /signin?application=walmart
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+              changeOrigin: true
+              xfwd: true
+  endpoint-service-oauth2callback:
+    apiEndpoints:
+      - endpoint-service-api17
+    policies:
+      - cookieparser: null
+      - sessionfeed: null
+      - csrftoken: null
+      - ott-auth-policy: null
+      - add-canary-header: null
+      - proxy:
+          - action:
+              serviceEndpoint: endpointservice
+              changeOrigin: true
+              xfwd: true
